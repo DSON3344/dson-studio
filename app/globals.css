@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Strictly control overflow to fix double scrollbar */
+html {
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #050508;
+  color: #ffffff;
+}
+
+/* Custom futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 6px; 
+}
+::-webkit-scrollbar-track {
+  background: #050508; 
+}
+::-webkit-scrollbar-thumb {
+  background: #22d3ee; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0085ff;
+}
+
+/* Apply new fonts globally */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-space-mono), monospace;
+  }
+}
+
+/* Custom UI Classes (Rewritten in native CSS to avoid @apply errors) */
+@layer utilities {
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.8);
+  }
+  
+  .neon-border-cyan {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.5);
+  }
 }

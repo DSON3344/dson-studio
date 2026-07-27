@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('dson-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) {}
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSON Studio | 吉隆坡 UI/UX 设计 · 网页开发 · 视频后期制作工作室</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="DSON Studio 是总部位于吉隆坡的创意数字工作室，提供 UI/UX 设计、网页开发（React/Webflow）与视频后期制作服务，服务马来西亚本地及国际高净值商业客户。报价透明，7个工作日起交付。">
+  <meta name="keywords" content="UI/UX设计, 网页开发, 视频后期制作, 吉隆坡设计工作室, Kuala Lumpur web design, Webflow开发, React网站, 品牌视频剪辑, Malaysia creative studio">
+  <meta name="author" content="DSON Studio">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://studio.dson.site/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studio.dson.site/">
+  <meta property="og:site_name" content="DSON Studio">
+  <meta property="og:title" content="DSON Studio | 吉隆坡 UI/UX 设计 · 网页开发 · 视频后期制作">
+  <meta property="og:description" content="为马来西亚本地及国际高净值商业客户提供 UI/UX 设计、网页开发与视频后期制作。透明报价，专业交付。">
+  <meta property="og:image" content="https://studio.dson.site/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DSON Studio | UI/UX · Web · Video Studio in Kuala Lumpur">
+  <meta name="twitter:description" content="UI/UX design, web development and video post-production for Malaysian and international clients. Transparent pricing, fast delivery.">
+  <meta name="twitter:image" content="https://studio.dson.site/og-cover.jpg">
+
+  <meta name="theme-color" content="#0A0D12" id="themeColorMeta">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured data: local business + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "DSON Studio",
+    "url": "https://studio.dson.site/",
+    "email": "hello@dson.studio",
+    "founder": { "@type": "Person", "name": "Chang Dick Shen" },
+    "areaServed": ["Malaysia", "Global"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Kuala Lumpur", "addressCountry": "MY" },
+    "priceRange": "RM 399 - RM 3899",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Post-Production" } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "报价有效期多久？", "acceptedAnswer": { "@type": "Answer", "text": "所有报价自发出之日起 30 天内有效。" } },
+      { "@type": "Question", "name": "项目如何计费与开工？", "acceptedAnswer": { "@type": "Answer", "text": "确认服务范围后，支付 50% 订金即可开工，尾款于交付后 7 天内结清。" } },
+      { "@type": "Question", "name": "是否支持海外/远程客户？", "acceptedAnswer": { "@type": "Answer", "text": "支持，我服务马来西亚本地及全球客户，全程远程协作。" } },
+      { "@type": "Question", "name": "源文件什么时候可以拿到？", "acceptedAnswer": { "@type": "Answer", "text": "Figma 设计稿与项目源代码将在全款结清后交付。" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="wrap">
+      <div class="logo"><svg class="logo-mark" viewBox="-0.5724 -1.056 1.1328 2.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="0.5104,-1.0060 0.5104,-0.5761 0.3254,-0.4687 0.3254,-0.6836 -0.3313,-0.3075 0.3254,0.0746 0.3254,-0.2597 0.5104,-0.3672 0.5104,0.3970 -0.5224,0.9940 -0.5224,0.5642 -0.3373,0.4567 -0.3373,0.6716 0.3194,0.2896 -0.3373,-0.0925 -0.3373,0.2537 -0.5224,0.3552 -0.5224,-0.4149" fill="currentColor"/></svg>DSON <span>Studio</span></div>
+      <div class="navlinks">
+        <a href="#services" data-i18n="nav.services">服务与报价</a>
+        <a href="#process" data-i18n="nav.process">合作流程</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">作品案例</a>
+        <a href="#faq" data-i18n="nav.faq">常见问题</a>
+        <a href="#contact" data-i18n="nav.contact">联系我</a>
+      </div>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换深浅色主题" data-i18n-aria="theme.toggleLabel">
+          <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
+        <div class="lang-switch en" id="langSwitch">
+          <div class="pill"></div>
+          <button class="zh" data-lang="zh">中文</button>
+          <button class="en" data-lang="en">EN</button>
+        </div>
+        <a href="#contact" class="nav-cta" data-i18n="nav.cta">获取报价</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+  <!-- Editorial Hero Section -->
+  <section class="hero" id="hero">
+    <svg class="hero-mark" viewBox="-0.5724 -1.056 1.1328 2.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon points="0.5104,-1.0060 0.5104,-0.5761 0.3254,-0.4687 0.3254,-0.6836 -0.3313,-0.3075 0.3254,0.0746 0.3254,-0.2597 0.5104,-0.3672 0.5104,0.3970 -0.5224,0.9940 -0.5224,0.5642 -0.3373,0.4567 -0.3373,0.6716 0.3194,0.2896 -0.3373,-0.0925 -0.3373,0.2537 -0.5224,0.3552 -0.5224,-0.4149" fill="currentColor"/>
+    </svg>
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">创意工作室 — UI/UX · 网页 · 视频</span></div>
+      <h1 data-i18n-html="hero.title">经得起考验<br><span class="grad">的设计。</span></h1>
+      <p class="lead" data-i18n="hero.lead">DSON Studio 的每个项目都由负责人亲自跟进，从初稿到交付全程如一——UI/UX 设计、网页开发、视频制作，始终保持同样的用心。</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary"><span data-i18n="hero.cta1">预约需求沟通</span><span class="arrow">→</span></a>
+        <a href="#services" class="btn-ghost" data-i18n="hero.cta2">查看服务定价</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="num">3</div><div class="lbl" data-i18n="hero.stat1">核心服务</div></div>
+        <div><div class="num">2×</div><div class="lbl" data-i18n="hero.stat2">阶段免费修改</div></div>
+        <div><div class="num">30d</div><div class="lbl" data-i18n="hero.stat3">报价有效期</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar reveal">
+    <div class="wrap">
+      <div class="trust-strip">
+        <div class="trust-item">
+          <span class="trust-num">100%</span>
+          <span class="trust-lbl" data-i18n="trust1">报价透明，无隐藏费用</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">7d</span>
+          <span class="trust-lbl" data-i18n="trust2">尾款结清后 7 天内交付源文件</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">2×</span>
+          <span class="trust-lbl" data-i18n="trust3">每阶段 2 次免费修改</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-num">MY / WW</span>
+          <span class="trust-lbl" data-i18n="trust4">本地 + 全球远程协作</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span> SERVICES</div>
+        <h2 data-i18n="services.title">三条核心服务线，一套透明报价</h2>
+        <p data-i18n="services.lead">入门、商务、高级三档定价，覆盖页面规模、技术栈与交付物的具体差异，帮助您快速匹配预算与需求。</p>
+      </div>
+
+      <div class="service-tabs" role="tablist">
+        <button class="tab-btn active" data-target="svc-uiux" role="tab" aria-selected="true" data-i18n="tabs.uiux">UI/UX 设计</button>
+        <button class="tab-btn" data-target="svc-web" role="tab" aria-selected="false" data-i18n="tabs.web">网页开发</button>
+        <button class="tab-btn" data-target="svc-video" role="tab" aria-selected="false" data-i18n="tabs.video">视频后期制作</button>
+      </div>
+
+      <div class="service-block service-panel active" id="svc-uiux" role="tabpanel">
+        <div class="service-head">
+          <span class="service-index">I — Design</span>
+          <h3 data-i18n="svc1.title">UI/UX 设计</h3>
+          <p class="service-tagline" data-i18n="svc1.tagline">Crafting intuitive experiences. Empowering digital success.</p>
+        </div>
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.starter">入门 Starter</span>
+            <p class="tier-desc" data-i18n="svc1.t1.desc">适合单页展示，交付简洁现代的轻量视觉升级。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="svc1.t1.pages">1–2 页</b></li>
+              <li><span data-i18n="feat.design">视觉设计</span><b data-i18n="svc1.t1.design">简洁 UI 样式</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeSingle">桌面 或 移动端</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev1">1 次免费修改</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc1.t1.deliver">PNG/JPG 及素材</b></li>
+            </ul>
+            <div class="tier-price">RM 599</div>
+          </div>
+          <div class="tier-card most-value">
+            <span class="tier-badge" data-i18n="tier.mostValue">最受欢迎</span>
+            <span class="tier-name" data-i18n="tier.business">商务 Business</span>
+            <p class="tier-desc" data-i18n="svc1.t2.desc">面向核心用户流程，兼容双端适配与自定义 UI 系统。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="feat.upTo5">最多 5 页</b></li>
+              <li><span data-i18n="feat.design">视觉设计</span><b data-i18n="svc1.t2.design">UI 系统与玻璃拟态</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeBoth">桌面 & 移动端</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev2">2 次免费修改</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc1.t2.deliver">完整 Figma 源文件</b></li>
+            </ul>
+            <div class="tier-price">RM 1,499</div>
+          </div>
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.premium">高级 Premium</span>
+            <p class="tier-desc" data-i18n="svc1.t3.desc">深度定制体验，含高级 UI 套件与高保真原型。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="feat.upTo10">最多 10 页</b></li>
+              <li><span data-i18n="feat.design">视觉设计</span><b data-i18n="svc1.t3.design">高级 UI 套件与原型</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeMulti">多设备优化</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev3">3 次修改 + 优先处理</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc1.t3.deliver">Figma + 开发交接文件</b></li>
+            </ul>
+            <div class="tier-price">RM 2,899</div>
+          </div>
+        </div>
+        <div class="addon-note">
+          <span data-i18n="addon.label">附加项：</span>
+          <span data-i18n="svc1.addon1">额外页面 RM 250 / 页</span> ·
+          <span data-i18n="svc1.addon2">加入交互原型 +20% 套餐价格</span> ·
+          <span data-i18n="svc1.addon3">加购修改轮次 RM 100 / 轮</span>
+        </div>
+      </div>
+
+      <div class="service-block service-panel" id="svc-web" role="tabpanel">
+        <div class="service-head">
+          <span class="service-index">II — Development</span>
+          <h3 data-i18n="svc2.title">网页开发</h3>
+          <p class="service-tagline" data-i18n="svc2.tagline">Turning visionary designs into high-performance digital realities.</p>
+        </div>
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.starter">入门 Starter</span>
+            <p class="tier-desc" data-i18n="svc2.t1.desc">适合简单落地页或个人作品集，代码简洁、加载迅速。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="svc1.t1.pages">1–2 页</b></li>
+              <li><span data-i18n="feat.stack">技术栈</span><b data-i18n="svc2.t1.stack">HTML/CSS/JS 或 Framer</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeSingle">桌面 或 移动端</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev1">1 次免费修改</b></li>
+              <li><span data-i18n="feat.deploy">部署方式</span><b data-i18n="svc2.t1.deploy">Vercel / GitHub Pages</b></li>
+            </ul>
+            <div class="tier-price">RM 899</div>
+          </div>
+          <div class="tier-card most-value">
+            <span class="tier-badge" data-i18n="tier.mostValue">最受欢迎</span>
+            <span class="tier-name" data-i18n="tier.business">商务 Business</span>
+            <p class="tier-desc" data-i18n="svc2.t2.desc">面向成长型品牌，全响应式开发，含动态内容与动效。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="feat.upTo5">最多 5 页</b></li>
+              <li><span data-i18n="feat.stack">技术栈</span><b data-i18n="svc2.t2.stack">Webflow 或 React 生态</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeBoth">桌面 & 移动端</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev2">2 次免费修改</b></li>
+              <li><span data-i18n="feat.deploy">部署方式</span><b data-i18n="svc2.t2.deploy">域名与主机配置</b></li>
+            </ul>
+            <div class="tier-price">RM 1,999</div>
+          </div>
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.premium">高级 Premium</span>
+            <p class="tier-desc" data-i18n="svc2.t3.desc">终极数字平台，复杂交互、CMS 集成与顶级性能优化。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">页面数</span><b data-i18n="feat.upTo10">最多 10 页</b></li>
+              <li><span data-i18n="feat.stack">技术栈</span><b data-i18n="svc2.t3.stack">高级逻辑与 CMS 配置</b></li>
+              <li><span data-i18n="feat.scope">响应式范围</span><b data-i18n="feat.scopeMulti">多设备优化</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev3">3 次修改 + 优先处理</b></li>
+              <li><span data-i18n="feat.deploy">部署方式</span><b data-i18n="svc2.t3.deploy">完整云端部署</b></li>
+            </ul>
+            <div class="tier-price">RM 3,899</div>
+          </div>
+        </div>
+        <div class="addon-note">
+          <span data-i18n="addon.label">附加项：</span>
+          <span data-i18n="svc2.addon1">额外页面 RM 350 / 页</span> ·
+          <span data-i18n="svc2.addon2">CMS / 数据库搭建 +20% 套餐价格</span> ·
+          <span data-i18n="svc2.addon3">加购修改轮次 RM 150 / 轮</span> ·
+          <span data-i18n="svc2.addon4">域名与主机费用另计</span>
+        </div>
+      </div>
+
+      <div class="service-block service-panel" id="svc-video" role="tabpanel">
+        <div class="service-head">
+          <span class="service-index">III — Motion</span>
+          <h3 data-i18n="svc3.title">视频后期制作</h3>
+          <p class="service-tagline" data-i18n="svc3.tagline">Crafting dynamic visuals. Amplifying your digital narrative.</p>
+        </div>
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.starter">入门 Starter</span>
+            <p class="tier-desc" data-i18n="svc3.t1.desc">适合社媒增长，节奏明快、高留存的短视频内容。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.duration">时长</span><b data-i18n="svc3.t1.duration">最长 60 秒</b></li>
+              <li><span data-i18n="feat.editing">剪辑内容</span><b data-i18n="svc3.t1.editing">快节奏剪辑与字幕</b></li>
+              <li><span data-i18n="feat.format">成片格式</span><b data-i18n="svc3.t1.format">9:16 竖版（Reels/TikTok）</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev1">1 次免费修改</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc3.t1.deliver">1080p MP4 文件</b></li>
+            </ul>
+            <div class="tier-price">RM 399</div>
+          </div>
+          <div class="tier-card most-value">
+            <span class="tier-badge" data-i18n="tier.mostValue">最受欢迎</span>
+            <span class="tier-name" data-i18n="tier.business">商务 Business</span>
+            <p class="tier-desc" data-i18n="svc3.t2.desc">面向品牌叙事，专业级 Vlog 或企业宣传片，精致调色。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.duration">时长</span><b data-i18n="svc3.t2.duration">最长 5 分钟</b></li>
+              <li><span data-i18n="feat.editing">剪辑内容</span><b data-i18n="svc3.t2.editing">调色与混音</b></li>
+              <li><span data-i18n="feat.format">成片格式</span><b data-i18n="svc3.t2.format">16:9 + 1 条竖版预告</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev2">2 次免费修改</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc3.t2.deliver">4K MP4 + 源文件</b></li>
+            </ul>
+            <div class="tier-price">RM 1,299</div>
+          </div>
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.premium">高级 Premium</span>
+            <p class="tier-desc" data-i18n="svc3.t3.desc">顶级电影质感体验，高端动效与 VFX 加持的营销大片。</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.duration">时长</span><b data-i18n="svc3.t3.duration">最长 10 分钟</b></li>
+              <li><span data-i18n="feat.editing">剪辑内容</span><b data-i18n="svc3.t3.editing">高级 VFX 与动画</b></li>
+              <li><span data-i18n="feat.format">成片格式</span><b data-i18n="svc3.t3.format">多平台优化格式</b></li>
+              <li><span data-i18n="feat.revisions">修改次数</span><b data-i18n="feat.rev3">3 次修改 + 优先处理</b></li>
+              <li><span data-i18n="feat.deliver">交付物</span><b data-i18n="svc3.t3.deliver">母版文件及全部素材</b></li>
+            </ul>
+            <div class="tier-price">RM 2,599</div>
+          </div>
+        </div>
+        <div class="addon-note">
+          <span data-i18n="addon.label">附加项：</span>
+          <span data-i18n="svc3.addon1">额外每分钟 RM 150</span> ·
+          <span data-i18n="svc3.addon2">素材采购 +20% 套餐价格</span> ·
+          <span data-i18n="svc3.addon3">加购修改轮次 RM 100 / 轮</span> ·
+          <span data-i18n="svc3.addon4">原始素材须由客户提供</span>
+        </div>
+      </div>
+
+      <p class="price-note" data-i18n="services.note">所有价格均为马来西亚令吉（RM）· 具体时间线将在项目沟通后确认 · 需支付 50% 订金以启动项目 · 报价有效期 30 天</p>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span> PROCESS</div>
+        <h2 data-i18n="process.title">从沟通到交付，四个明确阶段</h2>
+        <p data-i18n="process.lead">每一步都对应真实的时间线与交付成果；若客户失联超过 10 个工作日，项目将转为休眠（Dormant）状态。</p>
+      </div>
+      <div class="process">
+        <div class="process-step">
+          <span class="n">01 / BRIEF</span>
+          <h4 data-i18n="p1.title">需求梳理</h4>
+          <p data-i18n="p1.desc">整理项目范围、预算与时间线，确认服务档位。</p>
+        </div>
+        <div class="process-step">
+          <span class="n">02 / DEPOSIT</span>
+          <h4 data-i18n="p2.title">确认定金</h4>
+          <p data-i18n="p2.desc">50% 订金到账后正式开工，签署 MSA。</p>
+        </div>
+        <div class="process-step">
+          <span class="n">03 / DESIGN</span>
+          <h4 data-i18n="p3.title">设计与开发</h4>
+          <p data-i18n="p3.desc">每阶段最多 2 次免费修改，逐步推进交付。</p>
+        </div>
+        <div class="process-step">
+          <span class="n">04 / HANDOVER</span>
+          <h4 data-i18n="p4.title">结清交付</h4>
+          <p data-i18n="p4.desc">尾款 7 天内结清后，交付 Figma / 源代码等全部源文件。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span> SELECTED WORK</div>
+        <h2 data-i18n="folio.title">案例研究</h2>
+        <p data-i18n="folio.lead">精选项目案例，持续更新中——点击查看完整项目细节。</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="case-card">
+          <div class="case-media case-media--preview">
+            <div class="browser-chrome">
+              <span class="chrome-dot r"></span><span class="chrome-dot y"></span><span class="chrome-dot g"></span>
+              <span class="browser-url">visionlogic-ai.dson.site</span>
+            </div>
+            <div class="browser-frame-wrap">
+              <iframe class="browser-frame" src="https://visionlogic-ai.dson.site" loading="lazy" title="VisionLogic AI live preview"></iframe>
+            </div>
+            <a class="fullscreen-btn" href="https://visionlogic-ai.dson.site" target="_blank" rel="noopener" aria-label="Open full site" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 3H3v6M15 3h6v6M3 15v6h6M21 15v6h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+          <div class="case-body">
+            <span class="case-tag">UI/UX · FULL-STACK DEVELOPMENT</span>
+            <h3>VisionLogic AI</h3>
+            <p data-i18n="case1.desc">为 AI 产品打造的玻璃拟态界面系统与官网，强调数据可信度与未来感。</p>
+            <button class="case-view-btn" id="openVisionLogicCase"><span data-i18n="case.viewBtn">查看案例详情</span> <span class="arrow">→</span></button>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-media">
+            <span>VES LEAGUE — CASE STUDY</span>
+          </div>
+          <div class="case-body">
+            <span class="case-tag">VIDEO · BRAND IDENTITY</span>
+            <h3>VES League</h3>
+            <p data-i18n="case2.desc">赛事品牌视频后期与社媒剪辑，塑造电竞联赛的视觉张力与节奏感。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section>
+    <div class="wrap">
+      <div class="cta-strip">
+        <h2 data-i18n="ctaStrip.title">准备好开始一个经得起考验的项目了吗？</h2>
+        <p data-i18n="ctaStrip.lead">预约一次免费的需求沟通，我将在 1 个工作日内回复报价与时间线。</p>
+        <a href="#contact" class="btn-primary"><span data-i18n="ctaStrip.cta">立即联系 DSON Studio</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span> FAQ</div>
+        <h2 data-i18n="faq.title">常见问题</h2>
+        <p data-i18n="faq.lead">关于报价、流程与交付的常见疑问，点击展开查看详情。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span data-i18n="faq.q1">报价有效期多久？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a1">所有报价自发出之日起 30 天内有效，超过时效请重新联系我确认最新报价。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q2">项目如何计费与开工？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a2">确认服务范围与报价后，支付 50% 订金即可正式开工并签署 MSA，尾款于交付后 7 天内结清。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q3">是否支持海外 / 远程客户？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a3">支持。我服务马来西亚本地及全球客户，全程线上沟通与远程协作，不受地域限制。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q4">修改次数超出免费额度怎么办？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a4">每个项目阶段包含 2 次免费修改，超出部分按 RM 100–150 / 次收取附加修改费。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q5">源文件什么时候可以拿到？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a5">Figma 设计稿、项目源代码等源文件将在全款结清后统一交付。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q6">如果中途想取消项目？</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a6">取消项目 50% 定金不予退还；若项目已完成 75% 以上，则需支付全额费用。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="dot"></span> CONTACT</div>
+        <h2 data-i18n="contact.title">告诉我您的项目</h2>
+        <p data-i18n="contact.lead">填写下方表单，或直接通过邮箱 / 官网联系负责人 Chang Dick Shen。</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="item"><div class="lbl" data-i18n="contact.owner">负责人</div><div class="val">Chang Dick Shen</div></div>
+          <div class="item"><div class="lbl" data-i18n="contact.email">邮箱</div><div class="val">hello@dson.studio</div></div>
+          <div class="item"><div class="lbl" data-i18n="contact.whatsapp">WhatsApp</div><div class="val"><a href="https://wa.me/60178235842?text=您好，我想了解%20DSON%20Studio%20的服务" target="_blank" rel="noopener">+60 17-823 5842</a></div></div>
+          <div class="item"><div class="lbl" data-i18n="contact.site">官网</div><div class="val">studio.dson.site</div></div>
+          <div class="item"><div class="lbl" data-i18n="contact.region">服务地区</div><div class="val" data-i18n="contact.regionVal">Kuala Lumpur, Malaysia · 全球远程协作</div></div>
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name" data-i18n="form.name">姓名</label>
+          <input id="name" name="name" type="text" data-i18n-ph="form.namePh" placeholder="您的姓名" required>
+          <label for="email" data-i18n="form.email">邮箱</label>
+          <input id="email" name="email" type="email" placeholder="you@company.com" required>
+          <label for="service" data-i18n="form.service">感兴趣的服务</label>
+          <select id="service" name="service">
+            <option value="uiux" data-i18n="form.opt1">UI/UX 设计</option>
+            <option value="web" data-i18n="form.opt2">网页开发</option>
+            <option value="video" data-i18n="form.opt3">视频后期制作</option>
+            <option value="bundle" data-i18n="form.opt4">多项服务组合</option>
+          </select>
+          <label for="msg" data-i18n="form.msg">项目描述</label>
+          <textarea id="msg" name="message" data-i18n-ph="form.msgPh" placeholder="简单描述您的项目需求、预算范围与期望时间线"></textarea>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn-primary"><span class="btn-label" data-i18n="form.submit">发送需求</span><span class="arrow">→</span></button>
+          <p class="submitted" data-i18n="form.submitted">已收到，我将在 1 个工作日内回复。</p>
+          <p class="form-error" data-i18n="form.error">发送失败，请直接通过邮箱或 WhatsApp 联系我们。</p>
+        </form>
+        <p class="form-privacy" data-i18n="form.privacy">提交表单即代表您同意 DSON Studio 使用以上信息与您联系，讨论您的项目需求。</p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-grid">
+
+      <div class="footer-brand">
+        <div class="logo"><svg class="logo-mark" viewBox="-0.5724 -1.056 1.1328 2.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="0.5104,-1.0060 0.5104,-0.5761 0.3254,-0.4687 0.3254,-0.6836 -0.3313,-0.3075 0.3254,0.0746 0.3254,-0.2597 0.5104,-0.3672 0.5104,0.3970 -0.5224,0.9940 -0.5224,0.5642 -0.3373,0.4567 -0.3373,0.6716 0.3194,0.2896 -0.3373,-0.0925 -0.3373,0.2537 -0.5224,0.3552 -0.5224,-0.4149" fill="currentColor"/></svg>DSON <span>Studio</span></div>
+        <p class="footer-tagline" data-i18n-html="footer.tagline">经得起考验<span class="grad">的设计。</span></p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.navTitle">导航</h4>
+        <ul>
+          <li><a href="#services" data-i18n="nav.services">服务与报价</a></li>
+          <li><a href="#process" data-i18n="nav.process">合作流程</a></li>
+          <li><a href="#portfolio" data-i18n="nav.portfolio">作品案例</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">常见问题</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">联系我</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.socialTitle">社交媒体</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/@dson.0404" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://space.bilibili.com/318162425" target="_blank" rel="noopener">Bilibili</a></li>
+          <li><a href="https://www.instagram.com/dson_04" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://x.com/DSON_04" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li class="footer-placeholder"><span>Behance</span><span class="soon-tag" data-i18n="footer.comingSoon">即将上线</span></li>
+          <li class="footer-placeholder"><span>LinkedIn</span><span class="soon-tag" data-i18n="footer.comingSoon">即将上线</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.contactTitle">联系方式</h4>
+        <ul>
+          <li><a href="mailto:hello@dson.studio">hello@dson.studio</a></li>
+          <li><a href="https://wa.me/60178235842?text=您好，我想了解%20DSON%20Studio%20的服务" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://studio.dson.site" target="_blank" rel="noopener">studio.dson.site</a></li>
+          <li><a href="#contact" data-i18n="footer.getQuote">预约需求沟通 →</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <div class="fmuted">© <span id="footerYear">2026</span> DSON Studio. <span data-i18n="footer.rights">保留所有权利。</span> · <span data-i18n="footer.locationTag">吉隆坡，马来西亚</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <div class="case-modal-overlay" id="caseModalOverlay">
+    <div class="case-modal" role="dialog" aria-modal="true" aria-labelledby="caseModalTitle">
+      <button class="case-modal-close" id="caseModalClose" aria-label="Close">&times;</button>
+      <div class="case-modal-scroll">
+
+        <span class="case-tag" data-i18n="modal.tag">FINAL YEAR PROJECT · WEB APPLICATION</span>
+        <h2 id="caseModalTitle" class="modal-title">VisionLogic AI</h2>
+        <p class="modal-subtitle" data-i18n="modal.subtitle">Intelligent Design Evaluation Platform</p>
+
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal.roleLbl">Role</span><span class="modal-meta-val" data-i18n="modal.roleVal">Solo Designer &amp; Full-Stack Developer</span></div>
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal.timelineLbl">Timeline</span><span class="modal-meta-val" data-i18n="modal.timelineVal">13 Weeks (Jan–Apr 2026)</span></div>
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal.liveLbl">Live Site</span><span class="modal-meta-val"><a href="https://visionlogic-ai.dson.site" target="_blank" rel="noopener">visionlogic-ai.dson.site ↗</a></span></div>
+        </div>
+
+        <div class="tech-chips">
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span>
+          <span class="chip">Gemini AI API</span><span class="chip">HTML/CSS/JS</span><span class="chip">Vercel</span>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.problemTitle">The Problem</h3>
+          <p data-i18n="modal.problemP1">Design feedback in academic settings has always been broken. A student submits their best work, waits days for a review, and gets back something vague — "the composition feels off." Two lecturers, two different verdicts. No rubric, no consistency, no benchmark.</p>
+          <p data-i18n-html="modal.problemP2">This directly impacts GPA: a survey of 68 participants found <strong>53% reported that inconsistent grading had negatively affected their academic performance</strong>, and <strong>26.5% strongly agreed</strong> a standardized, objective evaluation tool was needed.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.conceptTitle">The Concept</h3>
+          <p data-i18n="modal.conceptP1">VisionLogic AI is a web-based intelligent design auditor — designers upload their work and receive instant, structured, AI-powered feedback scored across six professional metrics. The goal: replace subjective human critique with a consistent, data-driven framework, without sacrificing an experience that's intuitive for students at any skill level.</p>
+          <p class="modal-pull-quote" data-i18n="modal.conceptQuote">Upload. Analyze. Improve.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.processTitle">Design Process</h3>
+          <p data-i18n-html="modal.processP1"><strong>Research &amp; problem definition</strong> — a literature review confirmed no local tool existed for standardized design evaluation in Malaysia; a PESTLE analysis aligned the platform with Malaysia's National AI Roadmap and MyDIGITAL Phase 3 (2026–2030). Every decision was filtered through the Technology Acceptance Model (perceived usefulness + ease of use).</p>
+          <p data-i18n-html="modal.processP2"><strong>Wireframe to high-fidelity</strong> — from low-fidelity sketches and user-flow diagrams to a complete high-fidelity prototype in Figma, anchored in a dark-first aesthetic with cyan (#40CFC4) accents and a dual-mode sidebar (Guest / User).</p>
+          <ul class="modal-list" data-i18n-html="modal.processList">
+            <li>Landing page — hero with animated CTA and interactive guide</li>
+            <li>Analyze dashboard — upload zone, category/tone selector, live Radar Chart</li>
+            <li>History page — filterable evaluation log with export</li>
+            <li>Account &amp; settings — profile, language (EN/CN/MY), legal terms</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.aiTitle">The AI Evaluation Engine</h3>
+          <p data-i18n="modal.aiP1">Powered by Gemini AI (Flash model) via Google AI Studio, governed by a custom prompt-engineering framework: a Professional Design Director persona, 90/10 visual-to-context weighting, structured JSON output rendered as a Radar Chart plus a 2-page report — in English, Chinese, or Malay.</p>
+          <p data-i18n="modal.aiP2">Each design is scored across six metrics tailored to its category — UI/UX (Usability, Hierarchy, Consistency, Accessibility, Spacing, Flow), Graphic Design (Layout, Typography, Color Harmony, Visual Hierarchy, Impact, Whitespace), or Photography (Exposure, Color Mood, Texture, Balance, Contrast, Detail).</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.archTitle">Technical Architecture</h3>
+          <p data-i18n="modal.archP1">Built on Node.js + Express — chosen over React mid-development for reliable server-side Gemini API key management. MongoDB handles auth, sessions, and evaluation history under PDPA 2010 compliance; Vercel was selected over GitHub Pages for Node.js runtime support.</p>
+          <ul class="modal-list" data-i18n-html="modal.archList">
+            <li>Multer — design image upload handling</li>
+            <li>Bcrypt + Express-Session — password hashing &amp; session management</li>
+            <li>Nodemailer — OTP authentication emails</li>
+            <li>Puppeteer — automated PDF report generation</li>
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.challengesTitle">Challenges &amp; Solutions</h3>
+          <p data-i18n-html="modal.challengeP1"><strong>React pivot mid-development</strong> — client-side rendering couldn't securely manage the Gemini API key, so the frontend was rebuilt in vanilla HTML/CSS/JS on an Express backend. Costly in time, correct in direction.</p>
+          <p data-i18n-html="modal.challengeP2"><strong>Gemini prompt calibration</strong> — early evaluations were inconsistent until a structured prompt system with fixed personas and enforced JSON output made the AI behave like a design director, not a generalist chatbot.</p>
+          <p data-i18n-html="modal.challengeP3"><strong>Hosting limitations</strong> — GitHub Pages doesn't support Node.js execution, so Vercel was chosen for its runtime and secure environment variables.</p>
+          <p data-i18n-html="modal.challengeP4"><strong>13-week deadline</strong> — delivered April 26, 2026, covering research, design, full-stack development, testing, deployment, and thesis submission in parallel.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.resultsTitle">Results &amp; Validation</h3>
+          <div class="modal-stat-row">
+            <div class="modal-stat"><span class="modal-stat-num">68</span><span class="modal-stat-lbl" data-i18n="modal.stat1Lbl">survey participants</span></div>
+            <div class="modal-stat"><span class="modal-stat-num">38.2%</span><span class="modal-stat-lbl" data-i18n="modal.stat2Lbl">rated spacing/grid detection 4/5</span></div>
+            <div class="modal-stat"><span class="modal-stat-num">32.4%</span><span class="modal-stat-lbl" data-i18n="modal.stat3Lbl">valued it when a mentor's unavailable</span></div>
+            <div class="modal-stat"><span class="modal-stat-num">53%</span><span class="modal-stat-lbl" data-i18n="modal.stat4Lbl">had GPA affected by inconsistent grading</span></div>
+          </div>
+        </div>
+
+        <div class="modal-cta">
+          <a href="https://visionlogic-ai.dson.site" target="_blank" rel="noopener" class="btn-primary"><span data-i18n="modal.ctaBtn">Visit live site</span> <span class="arrow">↗</span></a>
+        </div>
+
+        <p class="modal-footer-note" data-i18n-html="modal.footerNote">Designed &amp; developed by Chang Dick Shen · DSON Studio<br>Bachelor of Creative Multimedia (Honours), TAR UMT · 2026</p>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

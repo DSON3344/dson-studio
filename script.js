@@ -401,6 +401,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav() {
+    if (!navToggle || !mobileNav) return;
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileNav.classList.remove('open');
+  }
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      mobileNav.classList.toggle('open', !isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileNav);
+    });
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !mobileNav.contains(e.target)) closeMobileNav();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobileNav();
+    });
+  }
+
   // Service category tabs
   const tabButtons = document.querySelectorAll('.tab-btn');
   tabButtons.forEach(btn => {
@@ -418,12 +443,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Handle contact form submission
+  // Handle contact form submission via EmailJS
+  // Setup required: sign up at emailjs.com, add an email service (e.g. Gmail
+  // connected to hello@dson.studio), create a template with variables
+  // matching the input `name` attributes below ({{name}}, {{email}},
+  // {{service}}, {{message}}), then replace the three placeholders here.
+  const EMAILJS_PUBLIC_KEY = 'NJRT3-4TjVfLih7n5';
+  const EMAILJS_SERVICE_ID = 'service_dson3344';
+  const EMAILJS_TEMPLATE_ID = 'template_dson3344';
+  if (window.emailjs) {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const form = this;
+
+      // Honeypot spam check — if this hidden field got filled, silently drop it
+      const honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
       const successMsg = form.querySelector('.submitted');
       const errorMsg = form.querySelector('.form-error');
       const submitBtn = form.querySelector('button[type="submit"]');
@@ -435,18 +476,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalLabel = btnLabel ? btnLabel.textContent : null;
       if (btnLabel) btnLabel.textContent = currentLang === 'zh' ? '发送中…' : 'Sending…';
 
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(response => {
-          if (response.ok) {
-            form.reset();
-            if (successMsg) successMsg.style.display = 'block';
-          } else {
-            if (errorMsg) errorMsg.style.display = 'block';
-          }
+      emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+        .then(() => {
+          form.reset();
+          if (successMsg) successMsg.style.display = 'block';
         })
         .catch(() => {
           if (errorMsg) errorMsg.style.display = 'block';
@@ -478,9 +511,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Active nav link highlighting
-  const navLinks = document.querySelectorAll('.navlinks a[href^="#"]');
-  const sections = Array.from(navLinks)
-    .map(link => document.querySelector(link.getAttribute('href')))
+  const navLinks = document.querySelectorAll('.navlinks a[href^="#"], .mobile-nav a[href^="#"]');
+  const sections = Array.from(new Set(Array.from(navLinks).map(link => link.getAttribute('href'))))
+    .map(href => document.querySelector(href))
     .filter(Boolean);
 
   if ('IntersectionObserver' in window && sections.length) {
@@ -488,8 +521,8 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           navLinks.forEach(link => link.classList.remove('active'));
-          const activeLink = document.querySelector(`.navlinks a[href="#${entry.target.id}"]`);
-          if (activeLink) activeLink.classList.add('active');
+          document.querySelectorAll(`.navlinks a[href="#${entry.target.id}"], .mobile-nav a[href="#${entry.target.id}"]`)
+            .forEach(link => link.classList.add('active'));
         }
       });
     }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });

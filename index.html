@@ -109,7 +109,17 @@
           <button class="en" data-lang="en">EN</button>
         </div>
         <a href="#contact" class="nav-cta" data-i18n="nav.cta">获取报价</a>
+        <button id="navToggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services" data-i18n="nav.services">服务与报价</a>
+      <a href="#process" data-i18n="nav.process">合作流程</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">作品案例</a>
+      <a href="#faq" data-i18n="nav.faq">常见问题</a>
+      <a href="#contact" data-i18n="nav.contact">联系我</a>
     </div>
   </nav>
 
@@ -479,7 +489,7 @@
           <div class="item"><div class="lbl" data-i18n="contact.site">官网</div><div class="val">studio.dson.site</div></div>
           <div class="item"><div class="lbl" data-i18n="contact.region">服务地区</div><div class="val" data-i18n="contact.regionVal">Kuala Lumpur, Malaysia · 全球远程协作</div></div>
         </div>
-        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contactForm">
           <label for="name" data-i18n="form.name">姓名</label>
           <input id="name" name="name" type="text" data-i18n-ph="form.namePh" placeholder="您的姓名" required>
           <label for="email" data-i18n="form.email">邮箱</label>
@@ -645,6 +655,7 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

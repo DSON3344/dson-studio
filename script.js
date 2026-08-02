@@ -50,19 +50,19 @@ const i18n = {
     "feat.revisions": "修改次数", "feat.deliver": "交付物", "feat.deploy": "部署方式",
     "feat.duration": "时长", "feat.editing": "剪辑内容", "feat.format": "成片格式",
     "feat.scopeSingle": "桌面 或 移动端", "feat.scopeBoth": "桌面 & 移动端", "feat.scopeMulti": "多设备优化",
-    "feat.rev1": "1 次免费修改", "feat.rev2": "2 次免费修改", "feat.rev3": "3 次修改 + 优先处理",
-    "feat.upTo5": "最多 5 页", "feat.upTo10": "最多 10 页",
+    "feat.rev1": "1 次免费修改", "feat.rev2": "2 次免费修改", "feat.rev3": "2 次免费修改 + 优先处理",
+    "feat.upTo5": "最多 5 页", "feat.upTo8": "最多 8 页",
     "addon.label": "附加项：",
     "svc1.tagline": "打造直观体验，赋能数字化成功。",
     "svc1.t1.desc": "适合单页展示，交付简洁现代的轻量视觉升级。", "svc1.t1.pages": "1–2 页", "svc1.t1.design": "简洁 UI 样式", "svc1.t1.deliver": "PNG/JPG 及素材",
     "svc1.t2.desc": "面向核心用户流程，兼容双端适配与自定义 UI 系统。", "svc1.t2.design": "UI 系统与玻璃拟态", "svc1.t2.deliver": "完整 Figma 源文件",
     "svc1.t3.desc": "深度定制体验，含高级 UI 套件与高保真原型。", "svc1.t3.design": "高级 UI 套件与原型", "svc1.t3.deliver": "Figma + 开发交接文件",
-    "svc1.addon1": "额外页面 RM 250 / 页", "svc1.addon2": "加入交互原型 +20% 套餐价格", "svc1.addon3": "加购修改轮次 RM 100 / 轮",
+    "svc1.addon1": "额外页面 RM 300 / 页", "svc1.addon2": "加入交互原型 +20% 套餐价格", "svc1.addon3": "加购修改轮次 RM 100 / 轮",
     "svc2.tagline": "将愿景设计转化为高性能的数字现实。",
     "svc2.t1.desc": "适合简单落地页或个人作品集，代码简洁、加载迅速。", "svc2.t1.stack": "HTML/CSS/JS 或 Framer", "svc2.t1.deploy": "Vercel / GitHub Pages",
     "svc2.t2.desc": "面向成长型品牌，全响应式开发，含动态内容与动效。", "svc2.t2.stack": "Webflow 或 React 生态", "svc2.t2.deploy": "域名与主机配置",
     "svc2.t3.desc": "终极数字平台，复杂交互、CMS 集成与顶级性能优化。", "svc2.t3.stack": "高级逻辑与 CMS 配置", "svc2.t3.deploy": "完整云端部署",
-    "svc2.addon1": "额外页面 RM 350 / 页", "svc2.addon2": "CMS / 数据库搭建 +20% 套餐价格", "svc2.addon3": "加购修改轮次 RM 150 / 轮", "svc2.addon4": "域名与主机费用另计",
+    "svc2.addon1": "额外页面 RM 300 / 页", "svc2.addon2": "CMS / 数据库搭建 +20% 套餐价格", "svc2.addon3": "加购修改轮次 RM 150 / 轮", "svc2.addon4": "域名与主机费用另计",
     "svc3.tagline": "打造动态视觉，放大你的数字叙事。",
     "svc3.t1.desc": "适合社媒增长，节奏明快、高留存的短视频内容。", "svc3.t1.duration": "最长 60 秒", "svc3.t1.editing": "快节奏剪辑与字幕", "svc3.t1.format": "9:16 竖版（Reels/TikTok）", "svc3.t1.deliver": "1080p MP4 文件",
     "svc3.t2.desc": "面向品牌叙事，专业级 Vlog 或企业宣传片，精致调色。", "svc3.t2.duration": "最长 5 分钟", "svc3.t2.editing": "调色与混音", "svc3.t2.format": "16:9 + 1 条竖版预告", "svc3.t2.deliver": "4K MP4 + 源文件",
@@ -80,8 +80,8 @@ const i18n = {
     "p4.title": "结清交付",
     "p4.desc": "尾款 7 天内结清后，交付 Figma / 源代码等全部源文件。",
     "folio.title": "案例研究",
-    "folio.lead": "正式上线前持续填充中，以下为核心案例占位，待素材到位后替换实拍图与数据。",
-    "case1.desc": "为 AI 产品打造的玻璃拟态界面系统与官网，强调数据可信度与未来感。",
+    "folio.lead": "只展示一个项目，但把判断过程写完整——包括中途做错又改回来的那一次。",
+    "case1.desc": "一人完成研究、设计、全栈开发与部署，13 周交付。中途因 API 密钥安全问题从 React 重构为 Express，是整个项目最贵也最正确的一个决定。",
     "case2.desc": "赛事品牌视频后期与社媒剪辑，塑造电竞联赛的视觉张力与节奏感。",
     "case.viewBtn": "查看案例详情",
     "modal.tag": "毕业设计项目 · 网页应用",
@@ -143,17 +143,21 @@ const i18n = {
     "form.submit": "发送需求",
     "form.submitted": "已收到，我将在 1 个工作日内回复。",
     "form.error": "发送失败，请直接通过邮箱或 WhatsApp 联系我。",
+    "form.captcha": "请先完成下方的验证。",
     "form.privacy": "提交表单即代表您同意 DSON Studio 使用以上信息与您联系，讨论您的项目需求。",
     "footer.tagline": "经得起考验<span class=\"grad\">的设计。</span>",
     "footer.navTitle": "导航",
     "footer.socialTitle": "社交媒体",
     "footer.contactTitle": "联系方式",
     "footer.comingSoon": "即将上线",
+    "footer.portfolio": "个人作品集 — dson.site",
     "footer.getQuote": "预约需求沟通 →",
     "footer.rights": "保留所有权利。",
     "footer.locationTag": "吉隆坡，马来西亚",
     "theme.toggleToLight": "切换到浅色主题",
-    "theme.toggleToDark": "切换到深色主题"
+    "theme.toggleToDark": "切换到深色主题",
+    "theme.toggleLabel": "切换深浅色主题",
+    "contact.whatsappLink": "https://wa.me/60178235842?text=您好，我想了解%20DSON%20Studio%20的服务"
   },
   en: {
     "nav.services": "Services",
@@ -205,19 +209,19 @@ const i18n = {
     "feat.revisions": "Revisions", "feat.deliver": "Deliverables", "feat.deploy": "Deployment",
     "feat.duration": "Duration", "feat.editing": "Editing", "feat.format": "Format",
     "feat.scopeSingle": "Desktop OR Mobile", "feat.scopeBoth": "Desktop & Mobile", "feat.scopeMulti": "Multi-Device Optimized",
-    "feat.rev1": "1 Free Revision", "feat.rev2": "2 Free Revisions", "feat.rev3": "3 Revisions + Priority",
-    "feat.upTo5": "Up to 5 pages", "feat.upTo10": "Up to 10 pages",
+    "feat.rev1": "1 Free Revision", "feat.rev2": "2 Free Revisions", "feat.rev3": "2 Free Revisions + Priority",
+    "feat.upTo5": "Up to 5 pages", "feat.upTo8": "Up to 8 pages",
     "addon.label": "Add-ons:",
     "svc1.tagline": "Crafting intuitive experiences. Empowering digital success.",
     "svc1.t1.desc": "Perfect for single-page showcases. A clean, modern, lightweight visual upgrade.", "svc1.t1.pages": "1–2 pages", "svc1.t1.design": "Clean UI Styling", "svc1.t1.deliver": "PNG/JPG & Assets",
     "svc1.t2.desc": "Built for core user flows. Includes dual-platform responsiveness and custom UI systems.", "svc1.t2.design": "UI System & Glassmorphism", "svc1.t2.deliver": "Full Figma Source File",
     "svc1.t3.desc": "The ultimate digital experience. Deep customization, advanced UI kits, and high-fidelity prototypes.", "svc1.t3.design": "Advanced UI Kit & Prototyping", "svc1.t3.deliver": "Figma + Dev Handoff",
-    "svc1.addon1": "Additional Pages RM 250 / page", "svc1.addon2": "Add Interactive Prototyping +20% of package price", "svc1.addon3": "Add Revision Rounds RM 100 / round",
+    "svc1.addon1": "Additional Pages RM 300 / page", "svc1.addon2": "Add Interactive Prototyping +20% of package price", "svc1.addon3": "Add Revision Rounds RM 100 / round",
     "svc2.tagline": "Turning visionary designs into high-performance digital realities.",
     "svc2.t1.desc": "Perfect for simple landing pages or personal portfolios. Clean code and fast loading.", "svc2.t1.stack": "HTML/CSS/JS or Framer", "svc2.t1.deploy": "Vercel / GitHub Pages",
     "svc2.t2.desc": "Built for growing brands. Fully responsive visual development with dynamic content and animations.", "svc2.t2.stack": "Webflow or React ecosystem", "svc2.t2.deploy": "Domain & Hosting Setup",
     "svc2.t3.desc": "The ultimate digital platform. Complex interactions, CMS integration and top-tier performance optimization.", "svc2.t3.stack": "Advanced Logic & CMS setup", "svc2.t3.deploy": "Full Cloud Deployment",
-    "svc2.addon1": "Additional Pages RM 350 / page", "svc2.addon2": "CMS / Database Setup +20% of package price", "svc2.addon3": "Add Revision Rounds RM 150 / round", "svc2.addon4": "Domain & hosting fees billed separately",
+    "svc2.addon1": "Additional Pages RM 300 / page", "svc2.addon2": "CMS / Database Setup +20% of package price", "svc2.addon3": "Add Revision Rounds RM 150 / round", "svc2.addon4": "Domain & hosting fees billed separately",
     "svc3.tagline": "Crafting dynamic visuals. Amplifying your digital narrative.",
     "svc3.t1.desc": "Perfect for social media growth. Fast-paced, high-retention short-form content.", "svc3.t1.duration": "Up to 60 seconds", "svc3.t1.editing": "Fast Cuts & Captions", "svc3.t1.format": "9:16 Vertical (Reels/TikTok)", "svc3.t1.deliver": "1080p MP4 File",
     "svc3.t2.desc": "Built for brand storytelling. Professional YouTube vlogs or corporate promos with cinematic polishing.", "svc3.t2.duration": "Up to 5 minutes", "svc3.t2.editing": "Color Grading & Audio Mix", "svc3.t2.format": "16:9 + 1 Vertical Teaser", "svc3.t2.deliver": "4K MP4 + Source File",
@@ -235,8 +239,8 @@ const i18n = {
     "p4.title": "Handover",
     "p4.desc": "Figma and source files delivered once the balance is settled within 7 days.",
     "folio.title": "Case studies",
-    "folio.lead": "Being filled in ahead of launch — placeholders below, swapped for real shots and metrics soon.",
-    "case1.desc": "A glassmorphic interface system and site for an AI product, built for credibility and a sense of the future.",
+    "folio.lead": "One project, documented in full — including the decision that was reversed halfway through.",
+    "case1.desc": "Research, design, full-stack development and deployment by one person, delivered in 13 weeks. Rebuilt from React to Express mid-project to keep the API key server-side — the most expensive and most correct decision in the build.",
     "case2.desc": "Brand video post-production and social edits giving an esports league its visual edge and pacing.",
     "case.viewBtn": "View case study",
     "modal.tag": "FINAL YEAR PROJECT · WEB APPLICATION",
@@ -298,17 +302,21 @@ const i18n = {
     "form.submit": "Send request",
     "form.submitted": "Got it — I'll reply within 1 business day.",
     "form.error": "Something went wrong — please reach out directly by email or WhatsApp.",
+    "form.captcha": "Please complete the verification below.",
     "form.privacy": "By submitting this form, you agree that DSON Studio may use the information above to contact you about your project.",
     "footer.tagline": "Design that<span class=\"grad\"> holds up.</span>",
     "footer.navTitle": "Navigation",
     "footer.socialTitle": "Social",
     "footer.contactTitle": "Get in Touch",
     "footer.comingSoon": "Coming soon",
+    "footer.portfolio": "Portfolio — dson.site",
     "footer.getQuote": "Book a discovery call →",
     "footer.rights": "All rights reserved.",
     "footer.locationTag": "Kuala Lumpur, Malaysia",
     "theme.toggleToLight": "Switch to light theme",
-    "theme.toggleToDark": "Switch to dark theme"
+    "theme.toggleToDark": "Switch to dark theme",
+    "theme.toggleLabel": "Toggle light and dark theme",
+    "contact.whatsappLink": "https://wa.me/60178235842?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20DSON%20Studio."
   }
 };
 
@@ -316,7 +324,7 @@ let currentLang = 'en';
 
 // Function to apply translation updates dynamically
 function applyLang(lang) {
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
 
   // Update text content
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -339,6 +347,22 @@ function applyLang(lang) {
     const key = el.getAttribute('data-i18n-ph');
     if (i18n[lang][key] !== undefined) {
       el.placeholder = i18n[lang][key];
+    }
+  });
+
+  // Update accessible names on icon-only controls
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (i18n[lang][key] !== undefined) {
+      el.setAttribute('aria-label', i18n[lang][key]);
+    }
+  });
+
+  // Update links whose target carries translatable text (e.g. WhatsApp prefill)
+  document.querySelectorAll('[data-i18n-href]').forEach(el => {
+    const key = el.getAttribute('data-i18n-href');
+    if (i18n[lang][key] !== undefined) {
+      el.setAttribute('href', i18n[lang][key]);
     }
   });
 
@@ -365,6 +389,24 @@ function updateThemeToggleLabel(lang) {
   if (label) btn.setAttribute('aria-label', label);
 }
 
+// reCAPTCHA v2 — rendered explicitly so the widget can match the active theme.
+// The Site Key is public by design; the Secret Key lives only in the EmailJS template.
+var RECAPTCHA_SITE_KEY = '6LcZqXEtAAAAABfGs4ypYZkExLUmDoX0M-ltOx2R';
+var recaptchaWidgetId = null;
+
+function renderRecaptcha() {
+  var box = document.getElementById('recaptchaBox');
+  if (!box || !window.grecaptcha || typeof grecaptcha.render !== 'function') return;
+  box.innerHTML = '';
+  recaptchaWidgetId = grecaptcha.render(box, {
+    sitekey: RECAPTCHA_SITE_KEY,
+    theme: document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+  });
+}
+
+// Called by the reCAPTCHA API once it finishes loading.
+window.onRecaptchaLoad = renderRecaptcha;
+
 function applyTheme(theme) {
   if (theme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -374,9 +416,10 @@ function applyTheme(theme) {
   try { localStorage.setItem('dson-theme', theme); } catch (e) {}
 
   const meta = document.getElementById('themeColorMeta');
-  if (meta) meta.setAttribute('content', theme === 'light' ? '#F5F1EA' : '#0A0D12');
+  if (meta) meta.setAttribute('content', theme === 'light' ? '#F5F7FA' : '#0A0D12');
 
   updateThemeToggleLabel(currentLang);
+  renderRecaptcha();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -449,12 +492,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle contact form submission via EmailJS
   // Setup required: sign up at emailjs.com, add an email service (e.g. Gmail
-  // connected to hello@dson.studio), create a template with variables
+  // connected to hello@dson.site), create a template with variables
   // matching the input `name` attributes below ({{name}}, {{email}},
   // {{service}}, {{message}}), then replace the three placeholders here.
-  const EMAILJS_PUBLIC_KEY = 'NJRT3-4TjVfLih7n5';
-  const EMAILJS_SERVICE_ID = 'service_dson3344';
-  const EMAILJS_TEMPLATE_ID = 'template_dson3344';
+  const EMAILJS_PUBLIC_KEY = 'D97dSRtpVsVCq_Kin';
+  const EMAILJS_SERVICE_ID = 'service_xy0eix7';
+  const EMAILJS_TEMPLATE_ID = 'template_golm6rw';
   if (window.emailjs) {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
   }
@@ -468,6 +511,17 @@ document.addEventListener('DOMContentLoaded', () => {
       // Honeypot spam check — if this hidden field got filled, silently drop it
       const honeypot = form.querySelector('input[name="_gotcha"]');
       if (honeypot && honeypot.value) return;
+
+      // reCAPTCHA must be solved before sending; the token rides along with
+      // sendForm automatically as the g-recaptcha-response field.
+      const captchaMsg = form.querySelector('.form-error--captcha');
+      if (captchaMsg) captchaMsg.style.display = 'none';
+      if (recaptchaWidgetId !== null && window.grecaptcha) {
+        if (!grecaptcha.getResponse(recaptchaWidgetId)) {
+          if (captchaMsg) captchaMsg.style.display = 'block';
+          return;
+        }
+      }
 
       const successMsg = form.querySelector('.submitted');
       const errorMsg = form.querySelector('.form-error');
@@ -489,6 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (errorMsg) errorMsg.style.display = 'block';
         })
         .finally(() => {
+          if (recaptchaWidgetId !== null && window.grecaptcha) grecaptcha.reset(recaptchaWidgetId);
           if (submitBtn) submitBtn.disabled = false;
           if (btnLabel && originalLabel) btnLabel.textContent = originalLabel;
         });

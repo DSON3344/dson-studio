@@ -382,8 +382,17 @@ section:not(:last-of-type)::after {
 /* Portfolio Cases */
 .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .portfolio-grid--single { grid-template-columns: 1fr; }
-/* reCAPTCHA widget is a fixed 304px iframe — scale it rather than let it overflow */
-.recaptcha-box { margin: 8px 0 4px; min-height: 78px; }
+/* reCAPTCHA is a cross-origin iframe — its interior cannot be styled. Frame it with
+   the site's own border and radius so it reads as a deliberate component, and nudge
+   the colour temperature toward the cool palette. */
+.recaptcha-box {
+  display: inline-block; line-height: 0; overflow: hidden;
+  margin: 8px 0 4px; min-height: 78px;
+  border: 1px solid var(--border-line); border-radius: var(--radius-sm);
+  background: var(--surface);
+  filter: brightness(0.88) saturate(0.85) hue-rotate(-8deg);
+}
+html[data-theme="light"] .recaptcha-box { filter: none; }
 .form-error--captcha { display: none; }
 @media(max-width: 400px) {
   .recaptcha-box { transform: scale(0.86); transform-origin: left top; min-height: 68px; }

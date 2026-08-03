@@ -382,6 +382,20 @@ section:not(:last-of-type)::after {
 /* Portfolio Cases */
 .portfolio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .portfolio-grid--single { grid-template-columns: 1fr; }
+/* Thirty-second summary above the full case log */
+.modal-summary {
+  margin: 22px 0 4px; padding: 20px 22px;
+  border: 1px solid var(--border-subtle); border-left: 2px solid var(--accent-bright);
+  border-radius: var(--radius-sm); background: var(--surface);
+}
+.modal-summary p { margin: 0 0 12px; font-size: 0.95rem; line-height: 1.65; color: var(--text-secondary); }
+.modal-summary p:last-child { margin-bottom: 0; }
+.modal-summary-lbl {
+  display: block; margin-bottom: 3px;
+  font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent-bright);
+}
+@media(max-width: 640px) { .modal-summary { padding: 16px 18px; } }
 /* reCAPTCHA is a cross-origin iframe — its interior cannot be styled. Frame it with
    the site's own border and radius so it reads as a deliberate component, and nudge
    the colour temperature toward the cool palette. */

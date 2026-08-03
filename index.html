@@ -538,9 +538,15 @@
       <button class="case-modal-close" id="caseModalClose" aria-label="Close">&times;</button>
       <div class="case-modal-scroll">
 
-        <span class="case-tag" data-i18n="modal.tag">FINAL YEAR PROJECT · WEB APPLICATION</span>
+        <span class="case-tag" data-i18n="modal.tag">WEB APPLICATION · 2026</span>
         <h2 id="caseModalTitle" class="modal-title">VisionLogic AI</h2>
         <p class="modal-subtitle" data-i18n="modal.subtitle">Intelligent Design Evaluation Platform</p>
+
+        <div class="modal-summary">
+          <p><span class="modal-summary-lbl" data-i18n="modal.sumProblemLbl">Problem</span><span data-i18n="modal.sumProblem">Design feedback in education is slow, subjective and inconsistent; 53% of 68 surveyed students said inconsistent grading had affected their GPA.</span></p>
+          <p><span class="modal-summary-lbl" data-i18n="modal.sumApproachLbl">Approach</span><span data-i18n="modal.sumApproach">A web platform that scores uploaded work across six category-specific metrics using a constrained AI evaluator, returning a radar chart and a written report in three languages.</span></p>
+          <p><span class="modal-summary-lbl" data-i18n="modal.sumOutcomeLbl">Outcome</span><span data-i18n="modal.sumOutcome">Delivered solo in 13 weeks: research, UI design, full-stack build and deployment. Rebuilt from the ground up at week 9 after the original architecture proved unmaintainable.</span></p>
+        </div>
 
         <div class="modal-meta-grid">
           <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal.roleLbl">Role</span><span class="modal-meta-val" data-i18n="modal.roleVal">Solo Designer & Full-Stack Developer</span></div>
@@ -570,12 +576,23 @@
           <p data-i18n-html="modal.processP1"><strong>Research &amp; problem definition</strong> — a literature review confirmed no local tool existed for standardized design evaluation in Malaysia; a PESTLE analysis aligned the platform with Malaysia's National AI Roadmap and MyDIGITAL Phase 3 (2026–2030). Every decision was filtered through the Technology Acceptance Model (perceived usefulness + ease of use).</p>
           <p data-i18n-html="modal.processP2"><strong>Wireframe to high-fidelity</strong> — from low-fidelity sketches and user-flow diagrams to a complete high-fidelity prototype in Figma, anchored in a dark-first aesthetic with cyan (#40CFC4) accents and a dual-mode sidebar (Guest / User).</p>
           <ul class="modal-list" data-i18n-html="modal.processList"><li>Landing page — hero with animated CTA and interactive guide</li><li>Analyze dashboard — upload zone, category/tone selector, live Radar Chart</li><li>History page — filterable evaluation log with export</li><li>Account &amp; settings — profile, language (EN/CN/MY), legal terms</li></ul>
+          <p data-i18n-html="modal.processDropped1"><strong>Directions that were dropped</strong> — the first build shipped both a light and a dark theme. Testing with real uploads killed the light one: user-submitted designs often contain large pale areas, and against a light interface those regions lost the contrast needed to read the annotations drawn over them. The interface had to stay darker than anything a user would upload, so dark-only became a functional constraint rather than a style preference.</p>
+          <p data-i18n="modal.processDropped2">The background was originally a flat gradient. Feedback from the project supervisor was that it read as empty for a platform whose subject is technical analysis, so it was rebuilt with structural, technical motifs that reinforce what the tool actually does.</p>
         </div>
 
         <div class="modal-section">
           <h3 data-i18n="modal.aiTitle">The AI Evaluation Engine</h3>
           <p data-i18n="modal.aiP1">Powered by Gemini AI (Flash model) via Google AI Studio, governed by a custom prompt-engineering framework: a Professional Design Director persona, 90/10 visual-to-context weighting, structured JSON output rendered as a Radar Chart plus a 2-page report — in English, Chinese, or Malay.</p>
           <p data-i18n="modal.aiP2">Each design is scored across six metrics tailored to its category — UI/UX (Usability, Hierarchy, Consistency, Accessibility, Spacing, Flow), Graphic Design (Layout, Typography, Color Harmony, Visual Hierarchy, Impact, Whitespace), or Photography (Exposure, Color Mood, Texture, Balance, Contrast, Detail).</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.rewriteTitle">The Rewrite</h3>
+          <p data-i18n="modal.rewriteP1">The first working prototype ran on Ollama — a locally hosted model. It scored designs, and it proved the concept. It also consumed enough resources to become unstable: under load the model would fail outright, taking the entire evaluation flow down with it. A tool whose only function is producing an evaluation cannot sometimes not produce one.</p>
+          <p data-i18n="modal.rewriteP2">Moving to a hosted model solved the reliability problem and created an architectural one. A hosted API needs a key, a key cannot live in client-side code, and the front end had been built on the assumption that it could. Fixing that meant introducing a server — which meant the existing architecture no longer fit.</p>
+          <p data-i18n="modal.rewriteP3">The decision point came at week 9. Three weeks had been spent away from the codebase working on the interface, and coming back to it, the original implementation was no longer legible enough to extend confidently. Patching an architecture that had to change anyway, in code that would take days to re-read, was going to cost more than starting again.</p>
+          <p data-i18n="modal.rewriteP4">The front end was rebuilt in vanilla HTML, CSS and JavaScript on a Node.js and Express backend, with the API key held server-side. Four weeks of a thirteen-week timeline remained.</p>
+          <p class="modal-pull-quote" data-i18n="modal.rewriteQuote">The most expensive decision in the project, and the correct one.</p>
         </div>
 
         <div class="modal-section">
@@ -586,20 +603,27 @@
 
         <div class="modal-section">
           <h3 data-i18n="modal.challengesTitle">Challenges & Solutions</h3>
-          <p data-i18n-html="modal.challengeP1"><strong>React pivot mid-development</strong> — client-side rendering couldn't securely manage the Gemini API key, so the frontend was rebuilt in vanilla HTML/CSS/JS on an Express backend. Costly in time, correct in direction.</p>
+          <p data-i18n-html="modal.challengeP1"><strong>Model reliability</strong> — the local Ollama model was unstable under load; migrating to a hosted Gemini model traded resource cost for consistency. See <em>The Rewrite</em> above.</p>
           <p data-i18n-html="modal.challengeP2"><strong>Gemini prompt calibration</strong> — early evaluations were inconsistent until a structured prompt system with fixed personas and enforced JSON output made the AI behave like a design director, not a generalist chatbot.</p>
           <p data-i18n-html="modal.challengeP3"><strong>Hosting limitations</strong> — GitHub Pages doesn't support Node.js execution, so Vercel was chosen for its runtime and secure environment variables.</p>
           <p data-i18n-html="modal.challengeP4"><strong>13-week deadline</strong> — delivered April 26, 2026, covering research, design, full-stack development, testing, deployment, and thesis submission in parallel.</p>
         </div>
 
         <div class="modal-section">
-          <h3 data-i18n="modal.resultsTitle">Results & Validation</h3>
+          <h3 data-i18n="modal.resultsTitle">Research Findings</h3>
+          <p data-i18n="modal.resultsNote">Figures below come from the pre-build survey that defined the problem. The platform is live; usage data has not been collected.</p>
           <div class="modal-stat-row">
             <div class="modal-stat"><span class="modal-stat-num">68</span><span class="modal-stat-lbl" data-i18n="modal.stat1Lbl">survey participants</span></div>
             <div class="modal-stat"><span class="modal-stat-num">38.2%</span><span class="modal-stat-lbl" data-i18n="modal.stat2Lbl">rated spacing/grid detection 4/5</span></div>
             <div class="modal-stat"><span class="modal-stat-num">32.4%</span><span class="modal-stat-lbl" data-i18n="modal.stat3Lbl">valued it when a mentor's unavailable</span></div>
             <div class="modal-stat"><span class="modal-stat-num">53%</span><span class="modal-stat-lbl" data-i18n="modal.stat4Lbl">had GPA affected by inconsistent grading</span></div>
           </div>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal.nextTitle">What's Next</h3>
+          <p data-i18n="modal.nextP1">The evaluation currently identifies where a design needs work — it marks the region and scores it. It does not yet say what to do about it.</p>
+          <p data-i18n="modal.nextP2">The next iteration adds a guided revision layer: instead of a marked area and a score, the user gets an ordered set of concrete steps for addressing each issue. Diagnosis is the harder half to build, but instruction is the half that changes a user's outcome — a score tells a student they are wrong, a sequence tells them how to be right.</p>
         </div>
 
         <div class="modal-cta">

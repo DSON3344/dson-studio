@@ -192,7 +192,9 @@ const i18n = {
     "modal2.nextP1": "落地页和生产控制台都已搭建完成，核心流水线也已用一整部长篇故事验证过一次。Auteur 现已在 auteur.dson.site 小范围上线。",
     "modal2.nextP2": "目前的重点是用真实产出验证状态引擎（State Engine），并持续打磨分镜脚本的可用性，为之后更大范围的公开推广做准备。",
     "modal2.ctaBtn": "体验 Auteur",
-    "modal2.footerNote": "内部产品，小范围试运行中 · DSON Studio"
+    "modal2.footerNote": "内部产品，小范围试运行中 · DSON Studio",
+    "case2.tag": "AI 产品 · 已上线",
+    "case2.desc": "内部产品，现已小范围上线。让 AI 用编剧和导演的判断力理解一整个故事，产出可直接用于第三方视频生成工具的分镜级提示词——核心流水线仍在持续迭代中。"
   },
   en: {
     "nav.services": "Services",
@@ -378,7 +380,17 @@ const i18n = {
     "theme.toggleToLight": "Switch to light theme",
     "theme.toggleToDark": "Switch to dark theme",
     "theme.toggleLabel": "Toggle light and dark theme",
-    "contact.whatsappLink": "https://wa.me/60178235842?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20DSON%20Studio."
+    "contact.whatsappLink": "https://wa.me/60178235842?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20DSON%20Studio.",
+    "case2.tag": "AI PRODUCT · LIVE",
+    "case2.desc": "An in-house product, now live in soft launch. Gets an AI to understand a whole story with a screenwriter's and a director's judgment, then output shot-level prompts ready for third-party video generation tools — the core pipeline is still being iterated on.",
+    "modal2.tag": "AI PRODUCT · LIVE · 2026",
+    "modal2.sumOutcome": "Core pipeline is working end-to-end and stress-tested against a full-length story. Now live at auteur.dson.site in soft launch, while the product keeps being refined.",
+    "modal2.statusVal": "Live · Soft launch",
+    "modal2.liveLbl": "Live Site",
+    "modal2.nextP1": "The landing page and production console are both built, and the core pipeline has been validated once against a full-length story. Auteur is now live in soft launch at auteur.dson.site.",
+    "modal2.nextP2": "The current focus is validating the State Engine against real output and continuing to refine how usable the shot scripts are, ahead of a wider public push.",
+    "modal2.ctaBtn": "Try Auteur",
+    "modal2.footerNote": "An in-house product, in soft launch · DSON Studio"
   }
 };
 

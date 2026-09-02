@@ -186,13 +186,40 @@ const i18n = {
     "theme.toggleLabel": "切换深浅色主题",
     "contact.whatsappLink": "https://wa.me/60178235842?text=您好，我想了解%20DSON%20Studio%20的服务",
     "modal2.tag": "AI 产品 · 已上线 · 2026",
+    "modal2.subtitle": "AI 编剧／导演分镜提示词引擎",
+    "modal2.sumProblemLbl": "问题",
+    "modal2.sumProblem": "第三方视频生成工具在角色动作、表情和场景呈现上做得不错，但对故事本身的推理能力不够——用户仍然要自己规划每一个场景，产出速度被人工写分镜的速度卡死。",
+    "modal2.sumApproachLbl": "做法",
+    "modal2.sumApproach": "一套五阶段流水线（精修 → 写作 → 分镜 → 一致性卡 → 生成），先读完整个故事，再产出结构化的分镜提示词，而不是走一步算一步地逐场景生成。",
+    "modal2.sumOutcomeLbl": "状态",
     "modal2.sumOutcome": "核心流水线已完整跑通，并用一整部长篇故事做过压力测试。现已在 auteur.dson.site 小范围上线，产品仍在持续打磨中。",
+    "modal2.roleLbl": "角色",
+    "modal2.roleVal": "内部产品 · 独立开发",
+    "modal2.timelineLbl": "项目周期",
+    "modal2.timelineVal": "持续进行中（2026 年启动）",
+    "modal2.statusLbl": "状态",
     "modal2.statusVal": "已上线 · 小范围试运行",
     "modal2.liveLbl": "线上网站",
+    "modal2.problemTitle": "问题所在",
+    "modal2.problemP1": "这个方向来自一段真实的实习经历——做 AI 生成短剧：第三方视频生成工具在角色动作、表情和场景切换上表现不错，但对故事本身的推理能力还不够。每一个场景仍然需要人先规划好，AI 才能执行。这一步没有消失——它把产出速度卡在了人工写分镜的速度上。",
+    "modal2.conceptTitle": "核心理念",
+    "modal2.conceptP1": "Auteur 想让 AI 真正理解一整个故事，再以编剧兼导演的思维产出分镜提示词——用户不用自己想清楚每个镜头该怎么拍，直接把结果丢给第三方视频工具就能用。目标不是 100% 完美还原，而是稳定可用的准确度。",
+    "modal2.pipelineTitle": "五阶段流水线",
+    "modal2.pipelineList": "<li>精修 — AI 读完大纲，标出问题并给出几个修改方向供选择</li><li>写作 — 梳理角色弧线、场景／情感转折点与因果链，并提供几种剧情走向供选择</li><li>分镜 — 按短剧节奏把每一集拆解成场景与镜头（密度可调）</li><li>一致性卡 — 为角色、场景与道具生成独立的外观参考提示词，锁定视觉一致性</li><li>生成 — 为每个场景输出完整的结构化分镜脚本，包含台词、时长与镜头语言</li>",
+    "modal2.stateEngineTitle": "状态引擎",
+    "modal2.stateEngineP1": "早期测试暴露出一个更深层的问题：角色技术上\"出现\"在故事里，却缺席了本该属于自己的关键转折点；人物关系会毫无过渡地从陌生人直接跳到知己；已经被摧毁的场景又毫无解释地完好重现。整条流水线里没有任何环节在追踪故事状态在各集之间是怎么变化的。",
+    "modal2.stateEngineP2": "为此加入了三层状态追踪——角色状态（恐惧与缺陷）、关系状态（必须按阶段推进、不能跳跃）、世界状态（场景与阵营的变化状态要在后续各集保持一致）。三次独立的 AI 交叉评估都不约而同地把这个方向标记为下一阶段最值得投入的地方。",
+    "modal2.challengesTitle": "问题与修复",
+    "modal2.challengeP1": "<strong>集数不足</strong> — 要求生成 50 集，结果只产出 25 集，因为\"精确集数\"这种指令对单次大批量生成调用来说本来就不可靠；后来加入了自动缺口检测，用续写的方式补齐缺的部分。",
+    "modal2.challengeP2": "<strong>长故事丢角色</strong> — 一个九个角色的故事在写作阶段会被悄悄压缩，大部分配角直接消失；后来加入了角色清单提取步骤，并在之后每一个阶段都强制做覆盖检查。",
+    "modal2.challengeP3": "<strong>速率限制与配额</strong> — Gemini 免费额度的每分钟限制，加上高峰期的 503 错误，多次把跑到一半的流水线打断；后来加入了自动重试、可调节的生成延迟，以及可续跑的检查点，这样即使撞到限速也不会丢掉已经完成的进度。",
+    "modal2.challengeP4": "<strong>节奏与时长</strong> — 早期产出的单集只有几秒钟，远低于目标时长；现在密度预设会把场景／镜头数量跟总时长目标绑定，而不是各管各的。",
+    "modal2.nextTitle": "下一步",
     "modal2.nextP1": "落地页和生产控制台都已搭建完成，核心流水线也已用一整部长篇故事验证过一次。Auteur 现已在 auteur.dson.site 小范围上线。",
     "modal2.nextP2": "目前的重点是用真实产出验证状态引擎（State Engine），并持续打磨分镜脚本的可用性，为之后更大范围的公开推广做准备。",
     "modal2.ctaBtn": "体验 Auteur",
     "modal2.footerNote": "内部产品，小范围试运行中 · DSON Studio",
+    "case2.title": "Auteur",
     "case2.tag": "AI 产品 · 已上线",
     "case2.desc": "内部产品，现已小范围上线。让 AI 用编剧和导演的判断力理解一整个故事，产出可直接用于第三方视频生成工具的分镜级提示词——核心流水线仍在持续迭代中。"
   },
@@ -381,12 +408,39 @@ const i18n = {
     "theme.toggleToDark": "Switch to dark theme",
     "theme.toggleLabel": "Toggle light and dark theme",
     "contact.whatsappLink": "https://wa.me/60178235842?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20DSON%20Studio.",
+    "case2.title": "Auteur",
     "case2.tag": "AI PRODUCT · LIVE",
     "case2.desc": "An in-house product, now live in soft launch. Gets an AI to understand a whole story with a screenwriter's and a director's judgment, then output shot-level prompts ready for third-party video generation tools — the core pipeline is still being iterated on.",
     "modal2.tag": "AI PRODUCT · LIVE · 2026",
+    "modal2.subtitle": "AI Screenwriter/Director Prompt Engine",
+    "modal2.sumProblemLbl": "Problem",
+    "modal2.sumProblem": "Third-party video generation tools handle character motion, expression and scene well, but their story reasoning isn't good enough — users still have to plan every scene themselves, which caps output at the speed of manual scriptwriting.",
+    "modal2.sumApproachLbl": "Approach",
+    "modal2.sumApproach": "A five-stage pipeline (refine → write → direct → consistency cards → generate) that reads the whole story first, then produces structured shot prompts, instead of writing scene-by-scene on the fly.",
+    "modal2.sumOutcomeLbl": "Status",
     "modal2.sumOutcome": "Core pipeline is working end-to-end and stress-tested against a full-length story. Now live at auteur.dson.site in soft launch, while the product keeps being refined.",
+    "modal2.roleLbl": "Role",
+    "modal2.roleVal": "In-house Product · Solo Development",
+    "modal2.timelineLbl": "Timeline",
+    "modal2.timelineVal": "Ongoing (started 2026)",
+    "modal2.statusLbl": "Status",
     "modal2.statusVal": "Live · Soft launch",
     "modal2.liveLbl": "Live Site",
+    "modal2.problemTitle": "The Problem",
+    "modal2.problemP1": "This direction came out of a real internship building AI-generated short dramas: third-party video generation tools handle character motion, expression and scene changes well, but their reasoning about story itself isn't good enough. Every scene still has to be planned by a human before the AI can execute it. That step doesn't disappear — it caps output at the speed of manual scriptwriting.",
+    "modal2.conceptTitle": "The Concept",
+    "modal2.conceptP1": "Auteur is meant to let an AI actually understand a full story, then think like both a screenwriter and a director when producing shot prompts — so the user doesn't have to work out how to shoot every scene themselves, just feed the output straight into a third-party video tool. The bar isn't 100% fidelity, just a consistently usable accuracy.",
+    "modal2.pipelineTitle": "The Five-Stage Pipeline",
+    "modal2.pipelineList": "<li>Refine — the AI reads the outline, flags issues and offers a few fix options to choose from</li><li>Write — structures character arcs, scene/emotional turning points and causal chains, offering a few storyline options</li><li>Direct — breaks episodes into scenes and shots at short-drama pacing (density is adjustable)</li><li>Consistency cards — generates standalone appearance-reference prompts for characters, sets and props to lock visual consistency</li><li>Generate — outputs the full structured shot script for every scene, including dialogue, duration and shot language</li>",
+    "modal2.stateEngineTitle": "The State Engine",
+    "modal2.stateEngineP1": "Early testing surfaced a deeper problem: characters would technically \"appear\" in the story but be absent from their own key turning points; relationships would jump from strangers to confidants with no transition; locations that had been destroyed would reappear intact with no explanation. Nothing in the pipeline was tracking how the story's state changes across episodes.",
+    "modal2.stateEngineP2": "Three tracking layers were added — character state (fears and flaws), relationship state (must progress through stages, no skipping ahead), and world state (locations and factions must keep their changed status consistent across later episodes). Three separate AI cross-evaluations independently flagged this as the highest-value direction for the next stage.",
+    "modal2.challengesTitle": "Problems & Fixes",
+    "modal2.challengeP1": "<strong>Episode count shortfalls</strong> — asking for 50 episodes produced only 25, because an exact episode count is an unreliable natural-language instruction for a single large-batch generation call; added automatic gap detection with a continuation pass to fill the shortfall.",
+    "modal2.challengeP2": "<strong>Dropped characters in long stories</strong> — a nine-character story would get silently compressed during the writing stage, dropping most supporting characters; added a character-list extraction pass with full-coverage checks enforced through every later stage.",
+    "modal2.challengeP3": "<strong>Rate limits and quota</strong> — Gemini's free-tier per-minute limit and peak-time 503s repeatedly broke the pipeline mid-run; added automatic retries, a configurable generation delay and resumable checkpoints so a rate-limit hit doesn't lose completed progress.",
+    "modal2.challengeP4": "<strong>Pacing and duration</strong> — early episodes ran only a few seconds, far under the target; density presets now bind scene/shot counts to a total duration target instead of managing them independently.",
+    "modal2.nextTitle": "What's Next",
     "modal2.nextP1": "The landing page and production console are both built, and the core pipeline has been validated once against a full-length story. Auteur is now live in soft launch at auteur.dson.site.",
     "modal2.nextP2": "The current focus is validating the State Engine against real output and continuing to refine how usable the shot scripts are, ahead of a wider public push.",
     "modal2.ctaBtn": "Try Auteur",
@@ -716,9 +770,32 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === caseModalOverlay) closeCaseModal();
     });
   }
+
+  // Auteur case study modal (separate overlay from the VisionLogic one above)
+  const auteurModalOverlay = document.getElementById('auteurModalOverlay');
+  const auteurModalClose = document.getElementById('auteurModalClose');
+  const openAuteurBtn = document.getElementById('openAuteurCase');
+
+  function openAuteurModal() {
+    auteurModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAuteurModal() {
+    auteurModalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  if (openAuteurBtn) openAuteurBtn.addEventListener('click', openAuteurModal);
+  if (auteurModalClose) auteurModalClose.addEventListener('click', closeAuteurModal);
+  if (auteurModalOverlay) {
+    auteurModalOverlay.addEventListener('click', (e) => {
+      if (e.target === auteurModalOverlay) closeAuteurModal();
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && caseModalOverlay && caseModalOverlay.classList.contains('active')) {
-      closeCaseModal();
+    if (e.key === 'Escape') {
+      if (caseModalOverlay && caseModalOverlay.classList.contains('active')) closeCaseModal();
+      if (auteurModalOverlay && auteurModalOverlay.classList.contains('active')) closeAuteurModal();
     }
   });
 });

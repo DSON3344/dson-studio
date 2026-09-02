@@ -60,7 +60,7 @@
     "founder": { "@type": "Person", "name": "Chang Dick Shen" },
     "areaServed": ["Malaysia", "Global"],
     "address": { "@type": "PostalAddress", "addressLocality": "Kuala Lumpur", "addressCountry": "MY" },
-    "priceRange": "RM 399 - RM 3899",
+    "priceRange": "RM 1299 - RM 3899",
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
@@ -179,7 +179,7 @@
       <div class="section-head">
         <div class="eyebrow"><span class="dot"></span> SERVICES</div>
         <h2 data-i18n="services.title">Three core services, one transparent price sheet</h2>
-        <p data-i18n="services.lead">Starter, Business and Premium tiers, each mapped to page count, tech stack and deliverables — so you can match budget to scope at a glance.</p>
+        <p data-i18n="services.lead">Switch tabs to see the scope and pricing for each service.</p>
       </div>
 
       <div class="service-tabs" role="tablist">
@@ -189,127 +189,145 @@
       </div>
 
       <div class="service-block service-panel active" id="svc-uiux" role="tabpanel">
-        <div class="service-head">
-          <span class="service-index">I — Design</span>
-          <h3 data-i18n="svc1.title">UI/UX Design</h3>
-          <p class="service-tagline" data-i18n="svc1.tagline">Crafting intuitive experiences. Empowering digital success.</p>
-        </div>
-        <div class="tier-grid tier-grid--two">
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.starter">Starter</span>
+            <p class="tier-desc" data-i18n="ui0.desc">Perfect for single-page showcases — a clean, lightweight visual upgrade.</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo2">Up to 2 pages</b></li>
+              <li><span data-i18n="feat.design">Visual Design</span><b data-i18n="ui0.design">Clean UI Styling</b></li>
+              <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeBoth">Desktop & Mobile</b></li>
+              <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev1">1 Free Revision</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="ui0.deliver">PNG/JPG & Assets</b></li>
+            </ul>
+            <div class="tier-price">RM 899+</div>
+          </div>
           <div class="tier-card most-value">
             <span class="tier-badge" data-i18n="tier.mostValue">Most Value</span>
-            <span class="tier-name" data-i18n="tier.business">Business</span>
-            <p class="tier-desc" data-i18n="svc1.t2.desc">Built for core user flows. Includes dual-platform responsiveness and custom UI systems.</p>
+            <span class="tier-name" data-i18n="tier.design">Design</span>
+            <p class="tier-desc" data-i18n="pkg1.desc">Interface design only. Pixel-perfect layouts with a custom UI system, delivered as a ready-to-build Figma file.</p>
             <ul class="tier-features">
-              <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo5">Up to 5 pages</b></li>
-              <li><span data-i18n="feat.design">Visual Design</span><b data-i18n="svc1.t2.design">UI System & Glassmorphism</b></li>
+              <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo3">Up to 3 pages</b></li>
+              <li><span data-i18n="feat.design">Visual Design</span><b data-i18n="pkg1.design">Custom UI System</b></li>
               <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeBoth">Desktop & Mobile</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev2">2 Free Revisions</b></li>
-              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="svc1.t2.deliver">Full Figma Source File</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="pkg1.deliver">Figma Source File</b></li>
             </ul>
-            <div class="tier-price">RM 1,499</div>
+            <div class="tier-price">RM 1,499+</div>
           </div>
           <div class="tier-card">
             <span class="tier-name" data-i18n="tier.premium">Premium</span>
-            <p class="tier-desc" data-i18n="svc1.t3.desc">The ultimate digital experience. Deep customization, advanced UI kits, and high-fidelity prototypes.</p>
+            <p class="tier-desc" data-i18n="ui2.desc">The ultimate digital experience. Deep customization, advanced UI kits, and high-fidelity prototypes.</p>
             <ul class="tier-features">
               <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo8">Up to 8 pages</b></li>
-              <li><span data-i18n="feat.design">Visual Design</span><b data-i18n="svc1.t3.design">Advanced UI Kit & Prototyping</b></li>
+              <li><span data-i18n="feat.design">Visual Design</span><b data-i18n="ui2.design">Advanced UI Kit & Prototyping</b></li>
               <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeMulti">Multi-Device Optimized</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev3">2 Free Revisions + Priority</b></li>
-              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="svc1.t3.deliver">Figma + Dev Handoff</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="ui2.deliver">Figma + Dev Handoff</b></li>
             </ul>
-            <div class="tier-price">RM 2,899</div>
+            <div class="tier-price">RM 2,899+</div>
           </div>
         </div>
         <div class="addon-note">
           <span data-i18n="addon.label">Add-ons:</span>
-          <span data-i18n="svc1.addon1">Additional Pages RM 300 / page</span> ·
-          <span data-i18n="svc1.addon2">Add Interactive Prototyping +20% of package price</span> ·
-          <span data-i18n="svc1.addon3">Add Revision Rounds RM 100 / round</span>
+          <span data-i18n="addon.pages">Additional Pages RM 300 / page</span> ·
+          <span data-i18n="addon.proto">Interactive Prototyping +20% of package price</span> ·
+          <span data-i18n="addon.rev">Additional Revision Rounds RM 100 / round</span>
         </div>
       </div>
 
       <div class="service-block service-panel" id="svc-web" role="tabpanel">
-        <div class="service-head">
-          <span class="service-index">II — Development</span>
-          <h3 data-i18n="svc2.title">Web Development</h3>
-          <p class="service-tagline" data-i18n="svc2.tagline">Turning visionary designs into high-performance digital realities.</p>
-        </div>
-        <div class="tier-grid tier-grid--two">
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="tier.starter">Starter</span>
+            <p class="tier-desc" data-i18n="web0.desc">Perfect for a simple landing page — clean, fast-loading, and live on Vercel.</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo2">Up to 2 pages</b></li>
+              <li><span data-i18n="feat.stack">Tech Stack</span><b data-i18n="web0.stack">Hand-Coded HTML/CSS/JS</b></li>
+              <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeBoth">Desktop & Mobile</b></li>
+              <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev1">1 Free Revision</b></li>
+              <li><span data-i18n="feat.deploy">Deployment</span><b data-i18n="web0.deploy">Vercel / GitHub Pages</b></li>
+            </ul>
+            <div class="tier-price">RM 1,199+</div>
+          </div>
           <div class="tier-card most-value">
             <span class="tier-badge" data-i18n="tier.mostValue">Most Value</span>
-            <span class="tier-name" data-i18n="tier.business">Business</span>
-            <p class="tier-desc" data-i18n="svc2.t2.desc">Built for growing brands. Fully responsive visual development with dynamic content and animations.</p>
+            <span class="tier-name" data-i18n="tier.designDev">Design + Development</span>
+            <p class="tier-desc" data-i18n="pkg2.desc">Design and build in one package. Fully responsive site with animations, deployed and ready to go live.</p>
             <ul class="tier-features">
               <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo5">Up to 5 pages</b></li>
-              <li><span data-i18n="feat.stack">Tech Stack</span><b data-i18n="svc2.t2.stack">Webflow or React ecosystem</b></li>
+              <li><span data-i18n="feat.stack">Tech Stack</span><b data-i18n="pkg2.stack">React / Next.js Ecosystem (Hand-Coded)</b></li>
               <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeBoth">Desktop & Mobile</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev2">2 Free Revisions</b></li>
-              <li><span data-i18n="feat.deploy">Deployment</span><b data-i18n="svc2.t2.deploy">Domain & Hosting Setup</b></li>
+              <li><span data-i18n="feat.deploy">Deployment</span><b data-i18n="pkg2.deploy">Domain & Hosting Setup</b></li>
             </ul>
-            <div class="tier-price">RM 1,999</div>
+            <div class="tier-price">RM 2,899+</div>
           </div>
           <div class="tier-card">
-            <span class="tier-name" data-i18n="tier.premium">Premium</span>
-            <p class="tier-desc" data-i18n="svc2.t3.desc">The ultimate digital platform. Complex interactions, CMS integration and top-tier performance optimization.</p>
+            <span class="tier-name" data-i18n="tier.fullProduct">Full Product</span>
+            <p class="tier-desc" data-i18n="pkg3.desc">The complete digital product. Advanced frontend interactions and animations, Vercel deployment and full asset handoff.</p>
             <ul class="tier-features">
               <li><span data-i18n="feat.pages">Pages</span><b data-i18n="feat.upTo8">Up to 8 pages</b></li>
-              <li><span data-i18n="feat.stack">Tech Stack</span><b data-i18n="svc2.t3.stack">Advanced Logic & CMS setup</b></li>
+              <li><span data-i18n="feat.stack">Tech Stack</span><b data-i18n="pkg3.stack">Advanced Interactions & Animation (Hand-Coded)</b></li>
               <li><span data-i18n="feat.scope">Responsive Scope</span><b data-i18n="feat.scopeMulti">Multi-Device Optimized</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev3">2 Free Revisions + Priority</b></li>
-              <li><span data-i18n="feat.deploy">Deployment</span><b data-i18n="svc2.t3.deploy">Full Cloud Deployment</b></li>
+              <li><span data-i18n="feat.deploy">Deployment</span><b data-i18n="pkg3.deploy">Vercel Production Deployment</b></li>
             </ul>
-            <div class="tier-price">RM 3,899</div>
+            <div class="tier-price">RM 3,899+</div>
           </div>
         </div>
         <div class="addon-note">
           <span data-i18n="addon.label">Add-ons:</span>
-          <span data-i18n="svc2.addon1">Additional Pages RM 300 / page</span> ·
-          <span data-i18n="svc2.addon2">CMS / Database Setup +20% of package price</span> ·
-          <span data-i18n="svc2.addon3">Add Revision Rounds RM 150 / round</span> ·
-          <span data-i18n="svc2.addon4">Domain & hosting fees billed separately</span>
+          <span data-i18n="addon.pages">Additional Pages RM 300 / page</span> ·
+          <span data-i18n="addon.proto">Interactive Prototyping +20% of package price</span> ·
+          <span data-i18n="addon.rev">Additional Revision Rounds RM 100 / round</span> ·
+          <span data-i18n="addon.hosting">Domain & hosting fees billed separately</span> ·
+          <span data-i18n="addon.optimize">Existing Website Redesign & SEO Optimization — quoted separately</span>
         </div>
       </div>
 
       <div class="service-block service-panel" id="svc-video" role="tabpanel">
-        <div class="service-head">
-          <span class="service-index">III — Motion</span>
-          <h3 data-i18n="svc3.title">Video Post-Production</h3>
-          <p class="service-tagline" data-i18n="svc3.tagline">Crafting dynamic visuals. Amplifying your digital narrative.</p>
-        </div>
-        <div class="tier-grid tier-grid--two">
+        <div class="tier-grid">
+          <div class="tier-card">
+            <span class="tier-name" data-i18n="video.tier1">Social Short-Form</span>
+            <p class="tier-desc" data-i18n="video.tier1.desc">Fast-paced cuts with captions for social growth — footage is provided by the client.</p>
+            <ul class="tier-features">
+              <li><span data-i18n="feat.duration">Duration</span><b data-i18n="video.tier1.duration">Up to 60 seconds</b></li>
+              <li><span data-i18n="feat.editing">Editing</span><b data-i18n="video.tier1.editing">Fast Cuts & Captions</b></li>
+              <li><span data-i18n="feat.format">Format</span><b data-i18n="video.tier1.format">9:16 Vertical (Reels/TikTok)</b></li>
+              <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev2">2 Free Revisions</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="video.tier1.deliver">1080p MP4 File</b></li>
+            </ul>
+            <div class="tier-price">RM 480+</div>
+          </div>
           <div class="tier-card most-value">
             <span class="tier-badge" data-i18n="tier.mostValue">Most Value</span>
-            <span class="tier-name" data-i18n="tier.business">Business</span>
-            <p class="tier-desc" data-i18n="svc3.t2.desc">Built for brand storytelling. Professional YouTube vlogs or corporate promos with cinematic polishing.</p>
+            <span class="tier-name" data-i18n="video.tier2">Long-Form Edit</span>
+            <p class="tier-desc" data-i18n="video.tier2.desc">For vlogs, corporate promos and other mid-complexity long-form videos, with color grading and audio mix.</p>
             <ul class="tier-features">
-              <li><span data-i18n="feat.duration">Duration</span><b data-i18n="svc3.t2.duration">Up to 5 minutes</b></li>
-              <li><span data-i18n="feat.editing">Editing</span><b data-i18n="svc3.t2.editing">Color Grading & Audio Mix</b></li>
-              <li><span data-i18n="feat.format">Format</span><b data-i18n="svc3.t2.format">16:9 + 1 Vertical Teaser</b></li>
+              <li><span data-i18n="feat.duration">Duration</span><b data-i18n="video.tier2.duration">Up to 5 minutes</b></li>
+              <li><span data-i18n="feat.editing">Editing</span><b data-i18n="video.tier2.editing">Color Grading & Audio Mix</b></li>
+              <li><span data-i18n="feat.format">Format</span><b data-i18n="video.tier2.format">16:9 + 1 Vertical Teaser</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev2">2 Free Revisions</b></li>
-              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="svc3.t2.deliver">4K MP4 + Source File</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="video.tier2.deliver">4K MP4 + Source File</b></li>
             </ul>
-            <div class="tier-price">RM 1,299</div>
+            <div class="tier-price">RM 1,299+</div>
           </div>
           <div class="tier-card">
-            <span class="tier-name" data-i18n="tier.premium">Premium</span>
-            <p class="tier-desc" data-i18n="svc3.t3.desc">The ultimate cinematic experience. High-end campaign videos featuring advanced motion graphics and VFX.</p>
+            <span class="tier-name" data-i18n="video.tier3">Extended Edit</span>
+            <p class="tier-desc" data-i18n="video.tier3.desc">For longer-form content needing more runtime and priority turnaround — same craft, bigger scope.</p>
             <ul class="tier-features">
-              <li><span data-i18n="feat.duration">Duration</span><b data-i18n="svc3.t3.duration">Up to 10 minutes</b></li>
-              <li><span data-i18n="feat.editing">Editing</span><b data-i18n="svc3.t3.editing">Advanced VFX & Animation</b></li>
-              <li><span data-i18n="feat.format">Format</span><b data-i18n="svc3.t3.format">Multi-Platform Optimized</b></li>
+              <li><span data-i18n="feat.duration">Duration</span><b data-i18n="video.tier3.duration">Up to 10 minutes</b></li>
+              <li><span data-i18n="feat.editing">Editing</span><b data-i18n="video.tier3.editing">Color Grading & Sound Design</b></li>
+              <li><span data-i18n="feat.format">Format</span><b data-i18n="video.tier3.format">Multi-Platform Optimized</b></li>
               <li><span data-i18n="feat.revisions">Revisions</span><b data-i18n="feat.rev3">2 Free Revisions + Priority</b></li>
-              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="svc3.t3.deliver">Master Files & All Assets</b></li>
+              <li><span data-i18n="feat.deliver">Deliverables</span><b data-i18n="video.tier3.deliver">Master Files & All Assets</b></li>
             </ul>
-            <div class="tier-price">RM 2,599</div>
+            <div class="tier-price">RM 2,499+</div>
           </div>
         </div>
         <div class="addon-note">
-          <span data-i18n="addon.label">Add-ons:</span>
-          <span data-i18n="svc3.addon1">Additional Minute RM 150 / min</span> ·
-          <span data-i18n="svc3.addon2">Stock Footage Sourcing +20% of package price</span> ·
-          <span data-i18n="svc3.addon3">Add Revision Rounds RM 100 / round</span> ·
-          <span data-i18n="svc3.addon4">Raw footage must be provided by client</span>
+          <span data-i18n="video.note">Raw footage must be provided by client. High-difficulty VFX editing (especially After Effects work) isn't taken on yet.</span>
         </div>
       </div>
 
@@ -323,7 +341,7 @@
       <div class="section-head">
         <div class="eyebrow"><span class="dot"></span> PROCESS</div>
         <h2 data-i18n="process.title">From brief to handover, four clear stages</h2>
-        <p data-i18n="process.lead">Every step maps to a real timeline and deliverable. Projects go Dormant after 10 working days of client silence.</p>
+        <p data-i18n="process.lead">Every step maps to a real timeline and deliverable. Each stage is considered approved if no feedback arrives within 3 working days of delivery; projects go Dormant after 10 working days of client silence.</p>
       </div>
       <div class="process">
         <div class="process-step">
@@ -358,7 +376,7 @@
         <h2 data-i18n="folio.title">Case studies</h2>
         <p data-i18n="folio.lead">One project, documented in full — including the decision that was reversed halfway through.</p>
       </div>
-      <div class="portfolio-grid portfolio-grid--single">
+      <div class="portfolio-grid">
         <div class="case-card">
           <div class="case-media case-media--preview">
             <div class="browser-chrome">
@@ -377,6 +395,18 @@
             <h3>VisionLogic AI</h3>
             <p data-i18n="case1.desc">Research, design, full-stack development and deployment by one person, delivered in 13 weeks. Rebuilt from React to Express mid-project to keep the API key server-side — the most expensive and most correct decision in the build.</p>
             <button class="case-view-btn" id="openVisionLogicCase"><span data-i18n="case.viewBtn">View case study</span> <span class="arrow">→</span></button>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-media case-media--soon">
+            <span class="soon-mark">A</span>
+            <span class="soon-label" data-i18n="case2.soonTag">Not yet public · In development</span>
+          </div>
+          <div class="case-body">
+            <span class="case-tag" data-i18n="case2.tag">AI PRODUCT · IN DEVELOPMENT</span>
+            <h3 data-i18n="case2.title">Auteur</h3>
+            <p data-i18n="case2.desc">An in-house product, not yet live. Gets an AI to understand a whole story with a screenwriter's and a director's judgment, then output shot-level prompts ready for third-party video generation tools — the core pipeline is still being iterated on.</p>
+            <button class="case-view-btn" id="openAuteurCase"><span data-i18n="case.viewBtn">View case study</span> <span class="arrow">→</span></button>
           </div>
         </div>
       </div>
@@ -427,6 +457,22 @@
           <summary><span data-i18n="faq.q6">What if I need to cancel mid-project?</span><span class="faq-icon">＋</span></summary>
           <p data-i18n="faq.a6">The 50% deposit is non-refundable on cancellation. If the project is over 75% complete, full payment is due.</p>
         </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q7">Who owns the IP once the project is done?</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a7">During development, all deliverables — designs, code and assets — remain the intellectual property of DSON Studio. Full IP ownership transfers to the client once the final balance is settled and source files are handed over. DSON Studio keeps the right to feature the project in its portfolio, unless confidentiality is agreed before the project starts.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q8">Will our project information stay confidential?</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a8">Any business or product information shared for the project is used only within that project's scope and is not disclosed elsewhere. A formal NDA can be signed before kickoff if your project needs one.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q9">What does the video editing service cover?</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a9">Mid-to-low complexity long and short-form video editing, including standard social media short videos — footage is provided by the client. High-difficulty VFX editing (especially After Effects work) isn't taken on yet while that skillset is still being built up.</p>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.q10">Who buys the domain?</span><span class="faq-icon">＋</span></summary>
+          <p data-i18n="faq.a10">The client buys and owns the domain — ownership and renewal responsibility stay with the client regardless of the studio relationship. In practice: I confirm the client's preferred name (2–3 backups are a good idea), check availability on a registrar like Namecheap and help pick the final option; the client purchases it under their own account and payment method, and I then handle the DNS setup to point it at the deployment (e.g. Vercel).</p>
+        </details>
       </div>
     </div>
   </section>
@@ -461,8 +507,9 @@
           </select>
           <label for="tier" data-i18n="form.tier">Package tier</label>
           <select id="tier" name="tier">
-            <option value="business" data-i18n="tier.business">Business</option>
-            <option value="premium" data-i18n="tier.premium">Premium</option>
+            <option value="design" data-i18n="tier.design">Design</option>
+            <option value="designDev" data-i18n="tier.designDev">Design + Development</option>
+            <option value="fullProduct" data-i18n="tier.fullProduct">Full Product</option>
             <option value="unsure" data-i18n="form.tierUnsure">Not sure yet — need advice</option>
           </select>
           <label for="msg" data-i18n="form.msg">Project description</label>
@@ -631,6 +678,78 @@
         </div>
 
         <p class="modal-footer-note" data-i18n-html="modal.footerNote">Designed &amp; developed by Chang Dick Shen · DSON Studio<br>Bachelor of Creative Multimedia (Honours), TAR UMT · 2026</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="case-modal-overlay" id="auteurModalOverlay">
+    <div class="case-modal" role="dialog" aria-modal="true" aria-labelledby="auteurModalTitle">
+      <button class="case-modal-close" id="auteurModalClose" aria-label="Close">&times;</button>
+      <div class="case-modal-scroll">
+
+        <span class="case-tag" data-i18n="modal2.tag">AI PRODUCT · LIVE · 2026</span>
+        <h2 id="auteurModalTitle" class="modal-title">Auteur</h2>
+        <p class="modal-subtitle" data-i18n="modal2.subtitle">AI Screenwriter/Director Prompt Engine</p>
+
+        <div class="modal-summary">
+          <p><span class="modal-summary-lbl" data-i18n="modal2.sumProblemLbl">Problem</span><span data-i18n="modal2.sumProblem">Third-party video generation tools handle character motion, expression and scene well, but their story reasoning isn't good enough — users still have to plan every scene themselves, which caps output at the speed of manual scriptwriting.</span></p>
+          <p><span class="modal-summary-lbl" data-i18n="modal2.sumApproachLbl">Approach</span><span data-i18n="modal2.sumApproach">A five-stage pipeline (refine → write → direct → consistency cards → generate) that reads the whole story first, then produces structured shot prompts, instead of writing scene-by-scene on the fly.</span></p>
+          <p><span class="modal-summary-lbl" data-i18n="modal2.sumOutcomeLbl">Status</span><span data-i18n="modal2.sumOutcome">Core pipeline is working end-to-end and stress-tested against a full-length story. Now live at auteur.dson.site in soft launch, while the product keeps being refined.</span></p>
+        </div>
+
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal2.roleLbl">Role</span><span class="modal-meta-val" data-i18n="modal2.roleVal">In-house Product · Solo Development</span></div>
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal2.timelineLbl">Timeline</span><span class="modal-meta-val" data-i18n="modal2.timelineVal">Ongoing (started 2026)</span></div>
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal2.statusLbl">Status</span><span class="modal-meta-val" data-i18n="modal2.statusVal">Live · Soft launch</span></div>
+          <div class="modal-meta-item"><span class="modal-meta-lbl" data-i18n="modal2.liveLbl">Live Site</span><span class="modal-meta-val"><a href="https://auteur.dson.site" target="_blank" rel="noopener">auteur.dson.site ↗</a></span></div>
+        </div>
+
+        <div class="tech-chips">
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Gemini AI API</span>
+          <span class="chip">HTML/CSS/JS</span>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.problemTitle">The Problem</h3>
+          <p data-i18n="modal2.problemP1">This direction came out of a real internship building AI-generated short dramas: third-party video generation tools handle character motion, expression and scene changes well, but their reasoning about story itself isn't good enough. Every scene still has to be planned by a human before the AI can execute it. That step doesn't disappear — it caps output at the speed of manual scriptwriting.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.conceptTitle">The Concept</h3>
+          <p data-i18n="modal2.conceptP1">Auteur is meant to let an AI actually understand a full story, then think like both a screenwriter and a director when producing shot prompts — so the user doesn't have to work out how to shoot every scene themselves, just feed the output straight into a third-party video tool. The bar isn't 100% fidelity, just a consistently usable accuracy.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.pipelineTitle">The Five-Stage Pipeline</h3>
+          <ul class="modal-list" data-i18n-html="modal2.pipelineList"><li>Refine — the AI reads the outline, flags issues and offers a few fix options to choose from</li><li>Write — structures character arcs, scene/emotional turning points and causal chains, offering a few storyline options</li><li>Direct — breaks episodes into scenes and shots at short-drama pacing (density is adjustable)</li><li>Consistency cards — generates standalone appearance-reference prompts for characters, sets and props to lock visual consistency</li><li>Generate — outputs the full structured shot script for every scene, including dialogue, duration and shot language</li></ul>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.stateEngineTitle">The State Engine</h3>
+          <p data-i18n="modal2.stateEngineP1">Early testing surfaced a deeper problem: characters would technically "appear" in the story but be absent from their own key turning points; relationships would jump from strangers to confidants with no transition; locations that had been destroyed would reappear intact with no explanation. Nothing in the pipeline was tracking how the story's state changes across episodes.</p>
+          <p data-i18n="modal2.stateEngineP2">Three tracking layers were added — character state (fears and flaws), relationship state (must progress through stages, no skipping ahead), and world state (locations and factions must keep their changed status consistent across later episodes). Three separate AI cross-evaluations independently flagged this as the highest-value direction for the next stage.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.challengesTitle">Problems & Fixes</h3>
+          <p data-i18n-html="modal2.challengeP1"><strong>Episode count shortfalls</strong> — asking for 50 episodes produced only 25, because an exact episode count is an unreliable natural-language instruction for a single large-batch generation call; added automatic gap detection with a continuation pass to fill the shortfall.</p>
+          <p data-i18n-html="modal2.challengeP2"><strong>Dropped characters in long stories</strong> — a nine-character story would get silently compressed during the writing stage, dropping most supporting characters; added a character-list extraction pass with full-coverage checks enforced through every later stage.</p>
+          <p data-i18n-html="modal2.challengeP3"><strong>Rate limits and quota</strong> — Gemini's free-tier per-minute limit and peak-time 503s repeatedly broke the pipeline mid-run; added automatic retries, a configurable generation delay and resumable checkpoints so a rate-limit hit doesn't lose completed progress.</p>
+          <p data-i18n-html="modal2.challengeP4"><strong>Pacing and duration</strong> — early episodes ran only a few seconds, far under the target; density presets now bind scene/shot counts to a total duration target instead of managing them independently.</p>
+        </div>
+
+        <div class="modal-section">
+          <h3 data-i18n="modal2.nextTitle">What's Next</h3>
+          <p data-i18n="modal2.nextP1">The landing page and production console are both built, and the core pipeline has been validated once against a full-length story. Auteur is now live in soft launch at auteur.dson.site.</p>
+          <p data-i18n="modal2.nextP2">The current focus is validating the State Engine against real output and continuing to refine how usable the shot scripts are, ahead of a wider public push.</p>
+        </div>
+
+        <div class="modal-cta">
+          <a href="https://auteur.dson.site" target="_blank" rel="noopener" class="btn-primary"><span data-i18n="modal2.ctaBtn">Try Auteur</span> <span class="arrow">↗</span></a>
+        </div>
+
+        <p class="modal-footer-note" data-i18n="modal2.footerNote">An in-house product, in soft launch · DSON Studio</p>
 
       </div>
     </div>

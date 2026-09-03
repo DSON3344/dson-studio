@@ -1,0 +1,39 @@
+name: Update sitemap lastmod
+
+# Runs only when the actual site content changes — not on every push,
+# and not on a timer. This keeps <lastmod> honest: it reflects a real
+# content change, not a fabricated "updated today" signal.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'style.css'
+      - 'script.js'
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update lastmod in sitemap.xml
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          sed -i "s|<lastmod>.*</lastmod>|<lastmod>${TODAY}</lastmod>|" sitemap.xml
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet sitemap.xml; then
+            git add sitemap.xml
+            git commit -m "chore: auto-update sitemap lastmod"
+            git push
+          else
+            echo "sitemap.xml lastmod already current, nothing to commit"
+          fi

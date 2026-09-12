@@ -26,13 +26,13 @@ jobs:
           TODAY=$(date -u +%Y-%m-%d)
           sed -i "s|<lastmod>.*</lastmod>|<lastmod>${TODAY}</lastmod>|" sitemap.xml
 
-      - name: Commit and push if changed
+            - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet sitemap.xml; then
             git add sitemap.xml
-            git commit -m "chore: auto-update sitemap lastmod"
+            git commit -m "chore: auto-update sitemap lastmod [skip ci]"
             git push
           else
             echo "sitemap.xml lastmod already current, nothing to commit"

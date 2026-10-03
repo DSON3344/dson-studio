@@ -118,7 +118,7 @@ nav {
   transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 16px; padding: 0 10px 0 24px; max-width: none; }
-.logo { font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+.logo { font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; border-radius: var(--radius-pill); }
 .logo-mark { width: 15px; height: 28px; color: var(--accent-bright); flex-shrink: 0; }
 .logo span {
   font-family: var(--font-body); font-weight: 400; color: var(--text-secondary);

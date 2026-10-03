@@ -619,10 +619,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Handle contact form submission via EmailJS
-  // Setup required: sign up at emailjs.com, add an email service (e.g. Gmail
-  // connected to hello@dson.site), create a template with variables
-  // matching the input `name` attributes below ({{name}}, {{email}},
-  // {{service}}, {{message}}), then replace the three placeholders here.
+  // The EmailJS template's variables must match the form inputs' `name`
+  // attributes ({{name}}, {{email}}, {{service}}, {{message}}). These IDs
+  // come from the EmailJS dashboard; the public key is safe to ship.
   const EMAILJS_PUBLIC_KEY = 'D97dSRtpVsVCq_Kin';
   const EMAILJS_SERVICE_ID = 'service_xy0eix7';
   const EMAILJS_TEMPLATE_ID = 'template_golm6rw';
@@ -718,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll reveal animation
   const revealTargets = document.querySelectorAll(
-    '.section-head, .glass-card, .process-step, .case-card, .cta-strip, .faq-item, .trust-bar'
+    '.section-head, .glass-card, .process, .process-step, .case-card, .cta-strip, .faq-item, .trust-bar'
   );
   revealTargets.forEach(el => el.classList.add('reveal'));
 

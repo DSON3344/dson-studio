@@ -97,6 +97,7 @@
 </head>
 <body>
 
+  <div class="grid-lines" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -144,21 +145,30 @@
   <main id="main">
   <!-- Editorial Hero Section -->
   <section class="hero" id="hero">
-    <svg class="hero-mark" viewBox="-0.5724 -1.056 1.1328 2.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <polygon points="0.5104,-1.0060 0.5104,-0.5761 0.3254,-0.4687 0.3254,-0.6836 -0.3313,-0.3075 0.3254,0.0746 0.3254,-0.2597 0.5104,-0.3672 0.5104,0.3970 -0.5224,0.9940 -0.5224,0.5642 -0.3373,0.4567 -0.3373,0.6716 0.3194,0.2896 -0.3373,-0.0925 -0.3373,0.2537 -0.5224,0.3552 -0.5224,-0.4149" fill="currentColor"/>
-    </svg>
     <div class="wrap">
-      <div class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">CREATIVE STUDIO — UI/UX · WEB · VIDEO</span></div>
-      <h1 data-i18n-html="hero.title">Design that<br><span class="grad">holds up.</span></h1>
-      <p class="lead" data-i18n="hero.lead">Every project at DSON Studio is handled directly, from first draft to final delivery — UI/UX, web development, and video, built with the same care throughout.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary"><span data-i18n="hero.cta1">Book a discovery call</span><span class="arrow">→</span></a>
-        <a href="#services" class="btn-ghost" data-i18n="hero.cta2">See pricing</a>
+      <div class="hero-top">
+        <div class="eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">CREATIVE STUDIO — UI/UX · WEB · VIDEO</span></div>
+        <span class="hero-coord" aria-hidden="true">3.1390° N, 101.6869° E</span>
       </div>
-      <div class="hero-stats">
-        <div><div class="num">3</div><div class="lbl" data-i18n="hero.stat1">CORE SERVICES</div></div>
-        <div><div class="num">2×</div><div class="lbl" data-i18n="hero.stat2">FREE REVISIONS / STAGE</div></div>
-        <div><div class="num">30d</div><div class="lbl" data-i18n="hero.stat3">QUOTE VALIDITY</div></div>
+      <div class="hero-main">
+        <h1 data-i18n-html="hero.title">Design that<br><span class="grad">holds up.</span></h1>
+        <svg class="hero-mark" viewBox="-0.5724 -1.056 1.1328 2.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="0.5104,-1.0060 0.5104,-0.5761 0.3254,-0.4687 0.3254,-0.6836 -0.3313,-0.3075 0.3254,0.0746 0.3254,-0.2597 0.5104,-0.3672 0.5104,0.3970 -0.5224,0.9940 -0.5224,0.5642 -0.3373,0.4567 -0.3373,0.6716 0.3194,0.2896 -0.3373,-0.0925 -0.3373,0.2537 -0.5224,0.3552 -0.5224,-0.4149" pathLength="1"/>
+        </svg>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="lead" data-i18n="hero.lead">Every project at DSON Studio is handled directly, from first draft to final delivery — UI/UX, web development, and video, built with the same care throughout.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary"><span data-i18n="hero.cta1">Book a discovery call</span><span class="arrow">→</span></a>
+            <a href="#services" class="btn-ghost" data-i18n="hero.cta2">See pricing</a>
+          </div>
+        </div>
+        <dl class="hero-stats">
+          <div><dt class="lbl" data-i18n="hero.stat1">CORE SERVICES</dt><dd class="num">3</dd></div>
+          <div><dt class="lbl" data-i18n="hero.stat2">FREE REVISIONS / STAGE</dt><dd class="num">2×</dd></div>
+          <div><dt class="lbl" data-i18n="hero.stat3">QUOTE VALIDITY</dt><dd class="num">30d</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -188,10 +198,11 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services">
-    <div class="wrap">
+  <section id="services" class="sec">
+    <div class="wrap sec-grid">
+      <div class="sec-rail" aria-hidden="true"><span class="sec-no">01</span><span class="sec-label">SERVICES</span></div>
+      <div class="sec-body">
       <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span> SERVICES</div>
         <h2 data-i18n="services.title">Three core services, one transparent price sheet</h2>
         <p data-i18n="services.lead">Switch tabs to see the scope and pricing for each service.</p>
       </div>
@@ -346,14 +357,16 @@
       </div>
 
       <p class="price-note" data-i18n="services.note">All prices are in Malaysian Ringgit (RM) · Timeline confirmed after project discussion · 50% upfront payment required to commence project · Quotation valid for 30 days</p>
+      </div>
     </div>
   </section>
 
   <!-- Process Section -->
-  <section id="process">
-    <div class="wrap">
+  <section id="process" class="sec">
+    <div class="wrap sec-grid">
+      <div class="sec-rail" aria-hidden="true"><span class="sec-no">02</span><span class="sec-label">PROCESS</span></div>
+      <div class="sec-body">
       <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span> PROCESS</div>
         <h2 data-i18n="process.title">From brief to handover, four clear stages</h2>
         <p data-i18n="process.lead">Every step maps to a real timeline and deliverable. Each stage is considered approved if no feedback arrives within 3 working days of delivery; projects go Dormant after 10 working days of client silence.</p>
       </div>
@@ -379,14 +392,16 @@
           <p data-i18n="p4.desc">Figma and source files delivered once the balance is settled within 7 days.</p>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
-    <div class="wrap">
+  <section id="portfolio" class="sec">
+    <div class="wrap sec-grid">
+      <div class="sec-rail" aria-hidden="true"><span class="sec-no">03</span><span class="sec-label">SELECTED WORK</span></div>
+      <div class="sec-body">
       <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span> SELECTED WORK</div>
         <h2 data-i18n="folio.title">Case studies</h2>
         <p data-i18n="folio.lead">One project, documented in full — including the decision that was reversed halfway through.</p>
       </div>
@@ -394,7 +409,6 @@
         <div class="case-card">
           <div class="case-media case-media--preview">
             <div class="browser-chrome">
-              <span class="chrome-dot r"></span><span class="chrome-dot y"></span><span class="chrome-dot g"></span>
               <span class="browser-url">visionlogic-ai.dson.site</span>
             </div>
             <div class="browser-frame-wrap">
@@ -405,6 +419,7 @@
             </a>
           </div>
           <div class="case-body">
+            <span class="case-no" aria-hidden="true">03.1</span>
             <span class="case-tag">UI/UX · FULL-STACK DEVELOPMENT</span>
             <h3>VisionLogic AI</h3>
             <p data-i18n="case1.desc">Research, design, full-stack development and deployment by one person, delivered in 13 weeks. Rebuilt from React to Express mid-project to keep the API key server-side — the most expensive and most correct decision in the build.</p>
@@ -414,7 +429,6 @@
         <div class="case-card">
           <div class="case-media case-media--preview">
             <div class="browser-chrome">
-              <span class="chrome-dot r"></span><span class="chrome-dot y"></span><span class="chrome-dot g"></span>
               <span class="browser-url">auteur.dson.site</span>
             </div>
             <div class="browser-frame-wrap">
@@ -425,6 +439,7 @@
             </a>
           </div>
           <div class="case-body">
+            <span class="case-no" aria-hidden="true">03.2</span>
             <span class="case-tag" data-i18n="case2.tag">AI PRODUCT · LIVE</span>
             <h3 data-i18n="case2.title">Auteur</h3>
             <p data-i18n="case2.desc">An in-house product, now live in soft launch. Gets an AI to understand a whole story with a screenwriter's and a director's judgment, then output shot-level prompts ready for third-party video generation tools — the core pipeline is still being iterated on.</p>
@@ -432,25 +447,29 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- CTA Banner Section -->
-  <section>
+  <section class="cta-band">
     <div class="wrap">
       <div class="cta-strip">
         <h2 data-i18n="ctaStrip.title">Ready to start a project that holds up?</h2>
-        <p data-i18n="ctaStrip.lead">Book a free discovery call — I'll reply with pricing and a timeline within 1 business day.</p>
-        <a href="#contact" class="btn-primary"><span data-i18n="ctaStrip.cta">Talk to DSON Studio</span><span class="arrow">→</span></a>
+        <div class="cta-side">
+          <p data-i18n="ctaStrip.lead">Book a free discovery call — I'll reply with pricing and a timeline within 1 business day.</p>
+          <a href="#contact" class="btn-primary"><span data-i18n="ctaStrip.cta">Talk to DSON Studio</span><span class="arrow">→</span></a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section id="faq">
-    <div class="wrap">
+  <section id="faq" class="sec">
+    <div class="wrap sec-grid">
+      <div class="sec-rail" aria-hidden="true"><span class="sec-no">04</span><span class="sec-label">FAQ</span></div>
+      <div class="sec-body">
       <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span> FAQ</div>
         <h2 data-i18n="faq.title">Frequently asked questions</h2>
         <p data-i18n="faq.lead">Common questions about pricing, process and delivery — tap to expand.</p>
       </div>
@@ -496,14 +515,16 @@
           <p data-i18n="faq.a10">The client buys and owns the domain — ownership and renewal responsibility stay with the client regardless of the studio relationship. In practice: I confirm the client's preferred name (2–3 backups are a good idea), check availability on a registrar like Namecheap and help pick the final option; the client purchases it under their own account and payment method, and I then handle the DNS setup to point it at the deployment (e.g. Vercel).</p>
         </details>
       </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <div class="wrap">
+  <section id="contact" class="sec">
+    <div class="wrap sec-grid">
+      <div class="sec-rail" aria-hidden="true"><span class="sec-no">05</span><span class="sec-label">CONTACT</span></div>
+      <div class="sec-body">
       <div class="section-head">
-        <div class="eyebrow"><span class="dot"></span> CONTACT</div>
         <h2 data-i18n="contact.title">Tell me about your project</h2>
         <p data-i18n="contact.lead">Fill out the form, or reach founder Chang Dick Shen directly by email or site.</p>
       </div>
@@ -545,6 +566,7 @@
         </form>
         <p class="form-privacy" data-i18n="form.privacy">By submitting this form, you agree that DSON Studio may use the information above to contact you about your project.</p>
       </div>
+      </div>
     </div>
   </section>
   </main>
@@ -576,7 +598,7 @@
           <li><a href="https://space.bilibili.com/318162425" target="_blank" rel="noopener">Bilibili</a></li>
           <li><a href="https://www.instagram.com/dson_04" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://x.com/DSON_04" target="_blank" rel="noopener">X (Twitter)</a></li>
-          <li class="footer-placeholder"><span>Behance</span><span class="soon-tag" data-i18n="footer.comingSoon">Coming soon</span></li>
+          <li><a href="https://www.behance.net/dson04" target="_blank" rel="noopener">Behance</a></li>
           <li><a href="https://www.linkedin.com/in/dickshenchang" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
@@ -593,6 +615,7 @@
       </div>
 
     </div>
+    <div class="wrap footer-wordmark" aria-hidden="true">DSON</div>
     <div class="footer-bottom">
       <div class="wrap">
         <div class="fmuted">© <span id="footerYear">2026</span> DSON Studio. <span data-i18n="footer.rights">All rights reserved.</span> · <span data-i18n="footer.locationTag">Kuala Lumpur, Malaysia</span></div>

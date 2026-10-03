@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll reveal animation
   const revealTargets = document.querySelectorAll(
-    '.section-head, .glass-card, .process-step, .case-card, .cta-strip, .faq-item, .trust-bar'
+    '.section-head, .glass-card, .process, .process-step, .case-card, .cta-strip, .faq-item, .trust-bar'
   );
   revealTargets.forEach(el => el.classList.add('reveal'));
 

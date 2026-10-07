@@ -56,6 +56,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syne:wght@400..800&family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tour/tour.css">
 
   <!-- Structured data: local business + FAQ -->
   <script type="application/ld+json">
@@ -126,6 +127,7 @@
           <button class="zh" data-lang="zh">中文</button>
           <button class="en" data-lang="en">EN</button>
         </div>
+        <button type="button" class="nav-tour" id="tourOpen" data-tour-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg><span data-i18n="nav.tour">3D tour</span></button>
         <a href="#contact" class="nav-cta" data-i18n="nav.cta">Get a Quote</a>
         <button id="navToggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -138,6 +140,7 @@
       <a href="#portfolio" data-i18n="nav.portfolio">Work</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <button type="button" class="mobile-tour" data-tour-open data-i18n="nav.tour">3D tour</button>
     </div>
   </nav>
 
@@ -161,6 +164,7 @@
           <div class="hero-actions">
             <a href="#contact" class="btn-primary"><span data-i18n="hero.cta1">Book a discovery call</span><span class="arrow">→</span></a>
             <a href="#services" class="btn-ghost" data-i18n="hero.cta2">See pricing</a>
+            <button type="button" class="btn-ghost hero-tour" data-tour-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg><span data-i18n="hero.tour">Walk through the studio in 3D</span></button>
           </div>
         </div>
         <dl class="hero-stats">
@@ -828,6 +832,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
   <script src="motion.js" defer></script>
+  <script src="tour/tour.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&amp;render=explicit" async defer></script>
 </body>
 </html>
